@@ -31,7 +31,7 @@
 }
 
 .landing-background-image-container {
-  mask-image: linear-gradient(to right, rgba(0,0,0,1.0)50%, transparent 100%);
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0)50%, transparent 100%);
   z-index: 1;
   position: fixed;
   width: 60% !important;
@@ -50,7 +50,7 @@
 
 .landing-logo-container {
   height: 50vh;
-  width:100%;
+  width: 100%;
   z-index: 2;
   display: flex;
   place-content: center;
@@ -67,11 +67,12 @@
 .button {
   border-radius: 6px;
   background: linear-gradient(to right, #ff352e, #ff8a7a);
+}
 
 @import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
 
 .halloweenText {
-  font-family: "Creepster", cursive; 
+  font-family: "Creepster", cursive;
 }
 
 .create-account-button {
