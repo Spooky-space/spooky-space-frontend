@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import { apiConfig } from './apiConfig.env';
+import { apiConfig } from '../apiConfig.env';
 
 const useHorrorMovies = () => {
     const [movies, setMovies] = useState([]);
