@@ -1,5 +1,5 @@
 import React from "react";
-import useHorrorMovies from "../tmbdService";
+import useHorrorMovies from "../tmdbService";
 
 const HorrorMovies = () => {
   const { movies, isLoading, error } = useHorrorMovies()
