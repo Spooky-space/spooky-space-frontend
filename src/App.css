@@ -1,27 +1,26 @@
-
 .page-body {
-height: 100vh;
-width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
 .landing-content-container {
-height: 100vh;
-width: 50%;
-position: absolute;
-right: 0;
-top: 0;
-z-index: 1;
-display: flex;
-justify-content: center;
+  height: 100vh;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .landing-logo-container {
-height: 50vh;
-width:100%;
-z-index: 2;
-display: flex;
-place-content: center;
-margin-top: 60px;
+  height: 50vh;
+  width:100%;
+  z-index: 2;
+  display: flex;
+  place-content: center;
+  margin-top: 60px;
 }
 
 .landing-button-container {
@@ -29,7 +28,7 @@ margin-top: 60px;
   width: 90%;
   position: absolute;
   bottom: 0;
-  left: 34%;
+  left: 43%;
 }
 
 .landing-background {
@@ -56,24 +55,16 @@ margin-top: 60px;
 }
 
 .landing-logo {
-width: 61%;
-object-fit: cover;
-/* margin-right: 0px; */
+  width: 61%;
+  object-fit: cover;
 }
 
-.button{
-  border-radius: 5px;
-background: linear-gradient(to right, #ff352e, #ff8a7a);
+.button {
+  border-radius: 6px;
+  background: linear-gradient(to right, #ff352e, #ff8a7a);
 }
 
 .create-account-button {
-display: flex;
-}
-
-.login-button {
-
-}
-
-.about-button {
-  
+  display: flex;
+  text-align: right;
 }
