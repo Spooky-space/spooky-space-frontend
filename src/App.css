@@ -67,6 +67,11 @@
 .button {
   border-radius: 6px;
   background: linear-gradient(to right, #ff352e, #ff8a7a);
+
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+.halloweenText {
+  font-family: "Creepster", cursive; 
 }
 
 .create-account-button {

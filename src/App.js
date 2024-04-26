@@ -1,4 +1,5 @@
 import React from "react"
+import HorrorMovies from "./components/HorrorMovies"
 import Landing from "./pages/Landing"
 import Home from "./pages/Home"
 import Show from "./pages/Show"
@@ -10,6 +11,7 @@ const App = () => {
   return (
     <>
       <Landing />
+      <HorrorMovies />
     </>
   )
 }
