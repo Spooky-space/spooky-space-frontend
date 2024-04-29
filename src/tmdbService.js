@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
-import { apiConfig } from "./apiConfig"
+import { apiConfig } from "./apiConfig.js"
 
 const useHorrorMovies = () => {
 	const [movies, setMovies] = useState([])
-	console.log(movies)
 	const [isLoading, setIsLoading] = useState(false)
 	const [error, setError] = useState(null)
 
