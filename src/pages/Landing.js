@@ -4,14 +4,6 @@ import Logo from "../assets/spooky-space-logo.png"
 import Modals from "../components/modal/Modal" // Ensure this import path is correct based on your project structure
 
 const Landing = () => {
-  // State to control the visibility of the modal
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  // Function to toggle the modal's visibility
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen)
-  }
-
   return (
     <div className="page-body landing-background">
       <div className="landing-background-image-container">
@@ -30,28 +22,17 @@ const Landing = () => {
           />
         </div>
         <div className="landing-button-container">
-          <button
-            className="create-account-button button"
-            onClick={toggleModal} // This could be set for a different function if needed
-          >
+          <button className="create-account-button button">
             Create Account
           </button>
-          <button
-            className="login-button button"
-            onClick={toggleModal} // This could be set for a different function if needed
-          >
-            Log In
+          <button className="login-button button">
+            Log In <Modals />
           </button>
-          <button
-            className="about-button button"
-            onClick={toggleModal} // This button specifically toggles the modal
-          >
-            About Us
+          <button className="about-button button">
+            About Us <Modals />
           </button>
         </div>
       </div>
-      {/* Conditionally render the Modal based on the isModalOpen state */}
-      <Modals isOpen={isModalOpen} toggle={toggleModal} />
     </div>
   )
 }
