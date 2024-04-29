@@ -10,8 +10,8 @@ import "./App.css"
 const App = () => {
   return (
     <>
-      <Landing />
-      <HorrorMovies />
+      {/* <Landing /> */}
+      <Home />
     </>
   )
 }
