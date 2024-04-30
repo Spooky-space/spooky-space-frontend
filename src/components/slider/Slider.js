@@ -8,9 +8,9 @@ import useSliding from "./useSliding"
 import useSizeElement from "./useSizeElement"
 import "./Slider.css"
 
-const Slider = ({ children, movie }) => {
+const Slider = ({ children }) => {
 	// state for the current slide
-	const [currentSlide, setCurrentSlide] = useState(movie)
+	const [currentSlide, setCurrentSlide] = useState()
 	// state to handle our useSizeElement
 	const { width, elementRef } = useSizeElement()
 	const { handlePrev, handleNext, slideProps, containerRef, hasNext, hasPrev } =
@@ -46,6 +46,7 @@ const Slider = ({ children, movie }) => {
 				{hasNext && <SlideButton onClick={handleNext} type="next" />}
 			</SliderWrapper>
 			{/* renders the content of each item */}
+
 			{currentSlide && <Content movie={currentSlide} onClose={handleClose} />}
 		</SliderContext.Provider>
 	)
