@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "../assets/red-tree2.png"
-import Logo from "../assets/spooky-space-logo.png"
+import Logo from "../assets/logo-screenshot-removebg.png"
 
 const Landing = () => {
   return (
@@ -25,8 +25,10 @@ const Landing = () => {
           <button className="create-account-button button">
             Create Account
           </button>
-          <button className="login-button button">Log In</button>
-          <button className="about-button button">About</button>
+          <div className="about-login">
+            <button className="login-button button">Log In</button>
+            <button className="about-button button">About</button>
+          </div>
         </div>
       </div>
     </div>

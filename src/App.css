@@ -15,13 +15,6 @@
 }
 
 
-.landing-button-container {
-  height: 45vh;
-  width: 90%;
-  position: absolute;
-  bottom: 0;
-  left: 43%;
-}
 
 .landing-background {
   right: 0;
@@ -49,7 +42,7 @@
 /* logo */
 
 .landing-logo-container {
-  height: 50vh;
+  height: 40vh;
   width:100%;
   z-index: 2;
   display: flex;
@@ -58,18 +51,46 @@
 }
 
 .landing-logo {
-  width: 61%;
   object-fit: cover;
 }
 
 /* buttons */
 
-.button {
-  border-radius: 6px;
-  background: linear-gradient(to right, #ff352e, #ff8a7a);
+.landing-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 45vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
-.create-account-button {
+.button {
+  border-radius: 9px;
+  background: linear-gradient(to right, #ff352e, #ff8a7a);
   display: flex;
   text-align: right;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 15px;
+  /* height: 20px !important; */
+}
+
+.about-login {
+  display: inline-block;
+  width: 200px;
+  justify-content: center;
+}
+
+
+.login-button {
+  margin: 0 5px
+}
+
+.about-button {
+  margin: 0 5px
 }
