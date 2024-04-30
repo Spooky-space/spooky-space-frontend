@@ -1,10 +1,10 @@
 import React from "react"
-import IconCross from "./IconCross"
 import NavButton from "../NavButton"
 import "./Content.css"
 
-const Content = ({ movie, onClose }) => {
-	const imageUrlBase = "https://image.tmdb.org/t/p/w500"
+const imageUrlBase = "https://image.tmdb.org/t/p/original"
+
+const Content = ({ movie, onClose, genre }) => {
 	return (
 		<div className="content">
 			<div className="content-background">
@@ -20,16 +20,16 @@ const Content = ({ movie, onClose }) => {
 				<div className="content-area-container">
 					<div className="content-title">{movie.title}</div>
 					<div className="content-description">
-						<h3>{movie.rating}</h3>
-						<h5>{movie.runtime},</h5>
-						<h5>{movie.genre}</h5>
+						<h3>Release Date: {movie.release_date}</h3>
+						<h5>Rating: {movie.vote_average.toFixed(1)}/10</h5>
+						<h5>{genre}</h5>
 						<div className="content-button">
 							<NavButton url={`/movie/${movie.id}`} buttonContent="See More" />
 						</div>
 					</div>
 				</div>
 				<button className="content-close" onClick={onClose}>
-					<IconCross />
+					<h1>x</h1>
 				</button>
 			</div>
 		</div>
