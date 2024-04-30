@@ -1,16 +1,19 @@
 import React from "react"
-import IconCross from "./Icons/IconCross"
+import IconCross from "./IconCross"
 import NavButton from "../NavButton"
 import "./Content.css"
 
 const Content = ({ movie, onClose }) => {
+	const imageUrlBase = "https://image.tmdb.org/t/p/w500"
 	return (
 		<div className="content">
 			<div className="content-background">
 				<div className="content-background-shadow" />
 				<div
 					className="content-background-image"
-					style={{ backgroundImage: `url(${movie.image})` }}
+					style={{
+						backgroundImage: `url(${imageUrlBase + movie.backdrop_path})`,
+					}}
 				/>
 			</div>
 			<div className="content-area">
