@@ -33,6 +33,18 @@
 	background: linear-gradient(to right, #ff352e, #ff8a7a);
 }
 
+/* HOME */
+.home-content {
+	width: 100%;
+	color: white;
+	font-family: Metal Mania;
+}
+.home-header {
+	font-family: Nosifer;
+	color: white;
+	width: 100%;
+}
+
 /* LANDING */
 .landing-background {
 	right: 0;
