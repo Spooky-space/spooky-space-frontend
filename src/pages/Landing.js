@@ -1,36 +1,58 @@
-import React, { useState } from "react"
+import React from "react"
 import Image from "../assets/red-tree2.png"
 import Logo from "../assets/spooky-space-logo.png"
-import Modals from "../components/modal/Modal" // Ensure this import path is correct based on your project structure
+import Modals from "../components/modal/Modal"
+import LoginForm from "../components/modal/LoginForm"
+import SignUpForm from "../components/modal/SignUpForm"
 
 const Landing = () => {
+  const handleAction = () => {
+    console.log("Action performed")
+  }
+
+  const handleCancel = () => {
+    console.log("Cancelled")
+  }
+
   return (
     <div className="page-body landing-background">
       <div className="landing-background-image-container">
         <img
           src={Image}
-          alt="picture of a glowing red tree in the dark"
+          alt="Glowing red tree"
           className="landing-background-image"
         />
       </div>
       <div className="landing-content-container">
         <div className="landing-logo-container">
-          <img
-            src={Logo}
-            alt="a reddish full moon with the title 'Spooky Space' on it"
-            className="landing-logo"
-          />
+          <img src={Logo} alt="Spooky Space" className="landing-logo" />
         </div>
         <div className="landing-button-container">
-          <button className="create-account-button button">
-            Create Account
-          </button>
-          <button className="login-button button">
-            Log In <Modals />
-          </button>
-          <button className="about-button button">
-            About Us <Modals />
-          </button>
+          <Modals
+            title="Create Account"
+            body={<SignUpForm />}
+            onAction={handleAction}
+            onCancel={handleCancel}
+            trigger={
+              <button className="create-account-button button">
+                Create Account
+              </button>
+            }
+          />
+          <Modals
+            title="Log In"
+            body={<LoginForm />}
+            onAction={handleAction}
+            onCancel={handleCancel}
+            trigger={<button className="login-button button">Log In</button>}
+          />
+          <Modals
+            title="About Us"
+            body="Information about Spooky Space."
+            onAction={handleAction}
+            onCancel={handleCancel}
+            trigger={<button className="about-button button">About Us</button>}
+          />
         </div>
       </div>
     </div>
