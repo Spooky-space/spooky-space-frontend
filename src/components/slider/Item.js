@@ -13,6 +13,8 @@ const Item = ({ movie }) => (
 			// checks to see if the current slide has the same id as the movie id
 			const isActive = currentSlide && currentSlide.id === movie.id
 
+			const imageUrlBase = "https://image.tmdb.org/t/p/w500"
+
 			return (
 				<div
 					// sets slides dimensions
@@ -22,7 +24,7 @@ const Item = ({ movie }) => (
 						"item-open": isActive,
 					})}
 				>
-					<img src={movie.image} alt="" />
+					<img src={imageUrlBase + movie.backdrop_path} alt={movie.title} />
 					{/* handles the styling of when the slide is clicked and updates state */}
 					<ShowDetailsButton onClick={() => onSelectSlide(movie)} />
 					{/* sets the slide to appear marked when clicked */}
