@@ -11,6 +11,8 @@ Cinzel: (https://fonts.google.com/specimen/Cinzel)
 
 ### Font Color
 
+whitesmoke
+
 ### Button Color
 
 ### Button styling
