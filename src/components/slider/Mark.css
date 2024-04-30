@@ -5,11 +5,10 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: -4px;
+	bottom: 0;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 	background-color: #fff !important;
 	opacity: 50%;
-	z-index: 4;
 }
 .mark:before,
 .mark:after {
