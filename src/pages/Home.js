@@ -1,7 +1,7 @@
 import React from "react"
 import HorrorMovies from "../components/HorrorMovies"
 
-const Home = ({ movies }) => {
+const Home = () => {
 	return (
 		<div className="page-body">
 			<div className="home-content">
