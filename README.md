@@ -4,6 +4,11 @@
 
 ### Font
 
+Creepster: (https://fonts.google.com/specimen/Creepster?query=creep)
+Nosifer: (https://fonts.google.com/specimen/Nosifer?query=nosifer)
+Metal Mania: (https://fonts.google.com/?query=metal+mania)
+Cinzel: (https://fonts.google.com/specimen/Cinzel)
+
 ### Font Color
 
 ### Button Color
