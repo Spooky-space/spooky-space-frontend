@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "../assets/red-tree2.png"
-import Logo from "../assets/spooky-space-logo.png"
+import Logo from "../assets/logo-screenshot-removebg.png"
 import Modals from "../components/modal/Modal"
 import LoginForm from "../components/modal/LoginForm"
 import SignUpForm from "../components/modal/SignUpForm"
@@ -29,6 +29,13 @@ const Landing = () => {
           <img src={Logo} alt="Spooky Space" className="landing-logo" />
         </div>
         <div className="landing-button-container">
+          <button className="create-account-button button">
+            Create Account
+          </button>
+          <div className="about-login">
+            <button className="login-button button">Log In</button>
+            <button className="about-button button">About</button>
+          </div>
           <Modals
             title="Create Account"
             body={<SignUpForm />}
