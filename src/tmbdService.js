@@ -4,6 +4,9 @@ import { apiConfig } from "./apiConfig.js"
 
 const useHorrorMovies = () => {
 	const [movies, setMovies] = useState([])
+
+	console.log(movies)
+
 	const [isLoading, setIsLoading] = useState(false)
 	const [error, setError] = useState(null)
 
