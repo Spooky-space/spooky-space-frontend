@@ -1,7 +1,8 @@
 .content {
 	position: relative;
 	height: 37vw;
-	margin-top: -40px;
+	margin-top: -4%;
+	z-index: 0 !important;
 }
 .content-background,
 .content-background-shadow,
@@ -18,7 +19,6 @@
 	background-position: center 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
-	z-index: 1;
 }
 .content-background {
 	left: 0;
@@ -26,15 +26,14 @@
 }
 .content-background-shadow {
 	left: 0;
-	background: #fff;
+	background: #212020;
 	width: 30%;
-	z-index: 2;
 }
 .content-background-shadow:before {
 	content: "";
 	position: absolute;
 	z-index: 10;
-	background-image: linear-gradient(to right, #fff, transparent);
+	background-image: linear-gradient(to right, #212020, transparent);
 	top: 0;
 	bottom: 0;
 	left: 100%;
@@ -44,36 +43,48 @@
 	left: 0;
 	right: 0;
 	height: 100%;
-	z-index: 3;
 }
 .content-area-container {
 	padding: 30px 70px;
-	color: white;
 }
 .content-title {
-	font-size: 45px;
-	color: #555555;
+	font-size: 60px;
+	color: whitesmoke;
 	font-weight: 700;
+	font-family: Metal Mania;
 }
 
 .content-description {
 	font-size: 18px;
-	color: #555555;
+	font-family: Cinzel;
+	color: whitesmoke;
 	margin-top: 20px;
-	max-width: 500px;
+	max-width: 300px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis !important;
+	text-align: center;
 }
 .content-close {
-	color: white;
+	color: whitesmoke;
 	width: 40px;
 	height: 40px;
 	background: transparent;
 	outline: none;
 	border: none;
 	position: absolute;
-	top: 35px;
-	right: 30px;
+	top: -3%;
+	right: 2%;
+	font-size: 30px;
+	font-family: inherit;
+	scroll-behavior: smooth !important;
 }
 .content-button {
-	margin-left: 90px;
 	width: auto;
+	margin-top: 10%;
+}
+.content-span {
+	border: 1px solid whitesmoke !important;
+	border-radius: 5px;
+	font-weight: 500;
 }

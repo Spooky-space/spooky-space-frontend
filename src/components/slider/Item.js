@@ -7,6 +7,8 @@ import ShowDetailsButton from "./ShowDetailsButton"
 import Mark from "./Mark"
 import "./Item.css"
 
+const imageUrlBase = "https://image.tmdb.org/t/p/original"
+
 const Item = ({ movie }) => (
 	<SliderContext.Consumer>
 		{({ onSelectSlide, currentSlide, elementRef }) => {
@@ -22,7 +24,7 @@ const Item = ({ movie }) => (
 						"item-open": isActive,
 					})}
 				>
-					<img src={movie.image} alt="" />
+					<img src={imageUrlBase + movie.poster_path} alt={movie.title} />
 					{/* handles the styling of when the slide is clicked and updates state */}
 					<ShowDetailsButton onClick={() => onSelectSlide(movie)} />
 					{/* sets the slide to appear marked when clicked */}

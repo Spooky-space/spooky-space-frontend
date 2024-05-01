@@ -8,9 +8,9 @@ import useSliding from "./useSliding"
 import useSizeElement from "./useSizeElement"
 import "./Slider.css"
 
-const Slider = ({ children, movie }) => {
+const Slider = ({ children, genreList }) => {
 	// state for the current slide
-	const [currentSlide, setCurrentSlide] = useState(movie)
+	const [currentSlide, setCurrentSlide] = useState()
 	// state to handle our useSizeElement
 	const { width, elementRef } = useSizeElement()
 	const { handlePrev, handleNext, slideProps, containerRef, hasNext, hasPrev } =
@@ -35,7 +35,10 @@ const Slider = ({ children, movie }) => {
 		<SliderContext.Provider value={contextValue}>
 			<SliderWrapper>
 				{/* dynamic css to apply to current slide when its open */}
-				<div className={cx("slider", { "slider-open": currentSlide != null })}>
+				<div
+					name="Slider"
+					className={cx("slider", { "slider-open": currentSlide != null })}
+				>
 					{/* sets the container size */}
 					<div ref={containerRef} className="slider-container" {...slideProps}>
 						{children}
@@ -46,7 +49,15 @@ const Slider = ({ children, movie }) => {
 				{hasNext && <SlideButton onClick={handleNext} type="next" />}
 			</SliderWrapper>
 			{/* renders the content of each item */}
-			{currentSlide && <Content movie={currentSlide} onClose={handleClose} />}
+
+			{currentSlide && (
+				<Content
+					name="content"
+					movie={currentSlide}
+					onClose={handleClose}
+					genreList={genreList}
+				/>
+			)}
 		</SliderContext.Provider>
 	)
 }
