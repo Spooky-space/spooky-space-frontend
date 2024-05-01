@@ -48,9 +48,10 @@
 	padding: 30px 70px;
 }
 .content-title {
-	font-size: 45px;
+	font-size: 60px;
 	color: whitesmoke;
 	font-weight: 700;
+	font-family: Metal Mania;
 }
 
 .content-description {
@@ -62,6 +63,7 @@
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis !important;
+	text-align: center;
 }
 .content-close {
 	color: whitesmoke;
@@ -71,12 +73,18 @@
 	outline: none;
 	border: none;
 	position: absolute;
-	top: -7%;
+	top: -3%;
 	right: 2%;
 	font-size: 30px;
 	font-family: inherit;
+	scroll-behavior: smooth !important;
 }
 .content-button {
-	margin-left: 90px;
 	width: auto;
+	margin-top: 10%;
+}
+.content-span {
+	border: 1px solid whitesmoke !important;
+	border-radius: 5px;
+	font-weight: 500;
 }
