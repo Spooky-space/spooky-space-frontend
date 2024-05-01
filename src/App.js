@@ -1,6 +1,5 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
-import HorrorMovies from "./components/HorrorMovies"
+import { Routes, Route } from "react-router-dom"
 import Landing from "./pages/Landing"
 import Home from "./pages/Home.js"
 import Show from "./pages/Show"
@@ -11,11 +10,11 @@ import "./App.css"
 const App = () => {
   return (
     <>
-      <Landing />
-      {/* <Home /> */}
-
-      {/* <Landing /> */}
-      <Home />
+      <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/home" element={<Home />} />
+      <Route path="/show/:id" element={<Show />} />
+      </Routes>
     </>
   )
 }
