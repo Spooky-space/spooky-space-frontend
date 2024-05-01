@@ -38,7 +38,7 @@ const Content = ({ movie, onClose, genreList }) => {
 						</div>
 						<div className="content-button">
 							<NavButton
-								url={`/movie/${movie.id}`}
+								url={`/show/${movie.id}`}
 								buttonContent="See More"
 								className="button"
 							/>
