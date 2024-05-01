@@ -13,6 +13,9 @@ const App = () => {
     <>
       <Landing />
       {/* <Home /> */}
+
+      {/* <Landing /> */}
+      <Home />
     </>
   )
 }

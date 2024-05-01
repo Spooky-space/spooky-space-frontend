@@ -1,5 +1,6 @@
 import React from "react"
 import HorrorMovies from "../components/HorrorMovies"
+
 const Home = () => {
 	return (
 		<div>

@@ -1,18 +1,32 @@
+/* GENERAL */
+.creepster-regular {
+	font-family: "Creepster", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+.nosifer-regular {
+	font-family: "Nosifer", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+}
+.metal-mania-regular {
+	font-family: "Metal Mania", system-ui;
+	font-weight: 400;
+	font-style: normal;
+}
+.cinzel {
+	font-family: "Cinzel", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
 .page-body {
-  height: 100vh;
-  width: 100%;
+	height: 100vh;
+	width: 100%;
+	background-color: #212020;
+	display: flex;
 }
 
-.landing-content-container {
-  height: 100vh;
-  width: 50%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-}
 
 .landing-button-container {
   height: 45vh;
@@ -20,33 +34,49 @@
   position: absolute;
   bottom: 0;
   left: 43%;
-}
 
+
+
+/* LANDING */
 .landing-background {
-  right: 0;
-  background: #212020;
-  z-index: 1;
-  position: fixed;
+	right: 0;
+	background: #212020;
+	z-index: 1;
+	position: fixed;
 }
-
 .landing-background-image-container {
+
   mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 100%);
   z-index: 1;
   position: fixed;
   width: 60% !important;
 }
-
 .landing-background-image {
+
   background-repeat: no-repeat;
   height: 100vh;
   object-fit: cover;
   width: 100%;
   z-index: 0;
   filter: brightness(50%);
+	background-repeat: no-repeat;
+	height: 100vh;
+	object-fit: cover;
+	width: 100%;
+	z-index: 0;
+	filter: brightness(50%);
 }
+.landing-content-container {
+	height: 100vh;
+	width: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
 
-/* logo */
-
+}
 .landing-logo-container {
   height: 50vh;
   width: 100%;
@@ -54,12 +84,13 @@
   display: flex;
   place-content: center;
   margin-top: 60px;
+
+}
+.landing-logo {
+	width: 61%;
+	object-fit: cover;
 }
 
-.landing-logo {
-  width: 61%;
-  object-fit: cover;
-}
 
 /* buttons */
 
@@ -150,3 +181,31 @@
 }
 
 /*^Form^*/
+
+.landing-button-container {
+	height: 45vh;
+	width: 90%;
+	position: absolute;
+	bottom: 0;
+	left: 43%;
+}
+
+/* NOT FOUND */
+.not-found-background {
+	background-image: url("./assets/not-found-image.webp");
+	display: flex;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+}
+.not-found-text-container {
+	align-content: flex-end;
+	margin-bottom: 100px;
+}
+.not-found-text {
+	font-family: Creepster;
+	color: white;
+}
+
