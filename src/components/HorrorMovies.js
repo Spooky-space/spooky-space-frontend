@@ -3,7 +3,6 @@ import useHorrorMovies from "../tmdbService";
 
 const HorrorMovies = () => {
   const { movies, isLoading, error } = useHorrorMovies()
-  console.log(movies);
   const imageUrlBase = "https://image.tmdb.org/t/p/w500"
 
   if (isLoading) return <div>Loading...</div>

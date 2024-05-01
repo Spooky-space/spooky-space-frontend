@@ -43,16 +43,16 @@ const Show = () => {
   }
 
   if(isLoading)
-  return
-<div>
-  Loading...
-</div>
+    return
+    <div>
+      Loading...
+    </div>
 
-if(!movie)
-return
-<div>
-  No movie found.
-</div>
+  if(!movie)
+    return
+    <div>
+      No movie found.
+    </div>
 
   return (
     <div className="show-body">
