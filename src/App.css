@@ -21,7 +21,7 @@
 	font-style: normal;
 }
 .page-body {
-	height: 100vh;
+	height: 100%;
 	width: 100%;
 	background-color: #212020;
 	display: flex;
@@ -29,8 +29,19 @@
 
 /* BUTTON */
 .button {
-	border-radius: 6px;
-	background: linear-gradient(to right, #ff352e, #ff8a7a);
+	border-radius: 6px !important;
+	background: linear-gradient(to right, #ff352e, #ff8a7a) !important;
+}
+.nav-button {
+	border: 2px solid whitesmoke;
+	border-radius: 6px !important;
+	background: transparent;
+	font-family: Creepster;
+	color: whitesmoke;
+	-webkit-text-stroke: 2px black;
+	font-size: 30px;
+	width: 40%;
+	height: 45px;
 }
 
 /* HOME */
@@ -38,11 +49,33 @@
 	width: 100%;
 	color: whitesmoke;
 	font-family: Metal Mania;
+	justify-content: center;
 }
 .home-header {
 	font-family: Nosifer;
+	font-size: xxx-large;
 	color: whitesmoke;
 	width: 100%;
+	text-align: center;
+}
+.home-slider-header {
+	padding-left: 60px;
+	margin: 0;
+	padding-top: 5px;
+}
+.home-banner {
+	position: absolute;
+	height: 100% !important;
+	width: 100% !important;
+	border-radius: 10px;
+	object-fit: cover;
+}
+.home-banner-container {
+	position: sticky;
+	left: 20% !important;
+	height: 100px;
+	width: 60% !important;
+	justify-content: center;
 }
 
 /* LANDING */
