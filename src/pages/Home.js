@@ -4,12 +4,6 @@ import Banner from "../assets/index-Red-Banner.png"
 
 const Home = () => {
 	return (
-		<div>
-			<h1>Spooky Space Top Picks</h1>
-			<HorrorMovies />
-		</div>
-	)
-	return (
 		<div className="page-body">
 			<div className="home-content">
 				<h1 className="home-header">Spooky Space Top Picks</h1>
