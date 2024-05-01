@@ -1,6 +1,73 @@
+/* GENERAL */
+.creepster-regular {
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.nosifer-regular {
+  font-family: "Nosifer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.metal-mania-regular {
+  font-family: "Metal Mania", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .page-body {
   height: 100vh;
   width: 100%;
+  background-color: #212020;
+  display: flex;
+}
+
+.landing-button-container {
+  height: 45vh;
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+  left: 43%;
+}
+
+
+/* LANDING */
+.landing-background {
+  right: 0;
+  background: #212020;
+  z-index: 1;
+  position: fixed;
+}
+
+.landing-background-image-container {
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 100%);
+  z-index: 1;
+  position: fixed;
+  width: 60% !important;
+}
+
+.landing-background-image {
+  background-repeat: no-repeat;
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  z-index: 0;
+  filter: brightness(50%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  z-index: 0;
+  filter: brightness(50%);
 }
 
 .landing-content-container {
@@ -13,40 +80,6 @@
   display: flex;
   justify-content: center;
 }
-
-
-.landing-button-container {
-  height: 45vh;
-  width: 90%;
-  position: absolute;
-  bottom: 0;
-  left: 43%;
-}
-
-.landing-background {
-  right: 0;
-  background: #212020;
-  z-index: 1;
-  position: fixed;
-}
-
-.landing-background-image-container {
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0)50%, transparent 100%);
-  z-index: 1;
-  position: fixed;
-  width: 60% !important;
-}
-
-.landing-background-image {
-  background-repeat: no-repeat;
-  height: 100vh;
-  object-fit: cover;
-  width: 100%;
-  z-index: 0;
-  filter: brightness(50%)
-}
-
-/* logo */
 
 .landing-logo-container {
   height: 50vh;
@@ -62,11 +95,14 @@
   object-fit: cover;
 }
 
+
 /* buttons */
 
 .button {
   border-radius: 6px;
-  background: linear-gradient(to right, #ff352e, #ff8a7a);
+  background: linear-gradient(to right, #ff352e, #ff8a7a) !important;
+  font-size: 10px;
+  padding: 10px 20px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
@@ -78,97 +114,4 @@
 .create-account-button {
   display: flex;
   text-align: right;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Show Page */
-
-.show-body {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(45, 45, 45);
-  color: whitesmoke
-}
-
-.movie-info {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-
-.movie-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.movie-title,
-.release-date {
-  margin: 0;
-}
-
-.movie-title {
-  display: flex;
-  font-weight: 800;
-}
-
-.release-date {
-  display: flex;
-  font-size: 25px;
-  margin-top: 15px;
-}
-
-.overview-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.overview {
-  max-width: 50%;
-  text-align: center;
-  padding-bottom: 20px;
 }
