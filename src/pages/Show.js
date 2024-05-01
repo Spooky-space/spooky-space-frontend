@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import axios from "axios"
 import { apiConfig } from "../apiConfig"
+import { Comment, Form, Button, Header } from "semantic-ui-react"
 
 const Show = () => {
   const imageUrlBase = "https://image.tmdb.org/t/p/original"
@@ -10,6 +11,10 @@ const Show = () => {
   const { id } = useParams()
   const [movie, setMovie] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
+  const [comments, setComments] = useState([])
+  const [commentText, setCommentText] = useState("")
+
+
   useEffect(() => {
     const fetchMovie = async () => {
       try {
@@ -26,6 +31,16 @@ const Show = () => {
     }
     fetchMovie()
   }, [id])
+
+  const handleAddComments = () => {
+    const newComment = {
+      id: comments.length + 1,
+      text: commentText,
+      date: new Date()
+    }
+    setComments([...comments, newComment])
+    setCommentText("")
+  }
 
   if(isLoading)
   return
@@ -74,7 +89,30 @@ return
         <div className="overview-container"> 
           <p className="overview">{movie.overview}</p>
         </div>
-      
+
+        <div className="comment-section">
+          <Comment.Group>
+            <Header as='h3' dividing>Comments</Header>
+
+            <Form reply>
+              <Form.TextArea value={commentText} 
+              onChange={(e) => setCommentText(e.target.value)}
+              />
+              <Button content="Add A Comment" labelPosition="center" icon="edit" primary onClick={handleAddComments} />
+            </Form>
+
+            {comments.map(comment => (
+              <Comment key={comment.id}>
+                <Comment.Content>
+                  <Comment.Text>{comment.text}</Comment.Text>
+                  <Comment.Metadata>
+                    <div>{comment.date.toLocaleString()}</div>
+                  </Comment.Metadata>
+                </Comment.Content>
+              </Comment>
+            ))}
+          </Comment.Group>
+        </div>
     </div>
   )
 }
