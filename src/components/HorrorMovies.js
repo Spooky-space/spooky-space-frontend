@@ -3,31 +3,64 @@ import useHorrorMovies from "../tmdbService"
 import Slider from "./slider"
 
 const HorrorMovies = () => {
-	const { movies, isLoading, error } = useHorrorMovies()
-	const imageUrlBase = "https://image.tmdb.org/t/p/w500"
-
+	const { movies, isLoading, error, genreList } = useHorrorMovies()
 	if (isLoading) return <div>Loading...</div>
 	if (error) return <div>Error Loading Movies: {error.message}</div>
 
+	const rating = () => {
+		return movies.slice().sort((a, b) => b.vote_average - a.vote_average)
+	}
+	const aToZ = () => {
+		return movies.slice().sort((a, b) => {
+			const titleA = a.title.toUpperCase()
+			const titleB = b.title.toUpperCase()
+			if (titleA < titleB) {
+				return -1
+			}
+			if (titleA > titleB) {
+				return 1
+			}
+			return 0
+		})
+	}
 	return (
 		<div>
-			<h1>HorrorMovies</h1>
-			<ul>
-				{movies.map((movie) => (
-					<li key={movie.id}>
-						<img src={imageUrlBase + movie.poster_path} alt={movie.title} />
-						<br />
-						{movie.title}
-					</li>
-				))}
-			</ul>
-			{movies.length > 0 && (
-				<Slider movies={movies}>
-					{movies.map((movie) => (
-						<Slider.Item movie={movie} key={movie.id}></Slider.Item>
-					))}
-				</Slider>
-			)}
+			<div>
+				<h1 name="most-popular" className="home-slider-header">
+					Most Popular
+				</h1>
+				{movies.length > 0 && (
+					<Slider movie={movies} genreList={genreList}>
+						{movies.map((movie) => (
+							<Slider.Item movie={movie} key={movie.id}></Slider.Item>
+						))}
+					</Slider>
+				)}
+			</div>
+			<div>
+				<h1 name="highest-rated" className="home-slider-header">
+					Highest Rated
+				</h1>
+				{movies.length > 0 && (
+					<Slider movie={rating()} genreList={genreList}>
+						{rating().map((movie) => (
+							<Slider.Item movie={movie} key={movie.id}></Slider.Item>
+						))}
+					</Slider>
+				)}
+			</div>
+			<div>
+				<h1 name="a-to-z" className="home-slider-header">
+					A to Z
+				</h1>
+				{movies.length > 0 && (
+					<Slider movie={aToZ()} genreList={genreList}>
+						{aToZ().map((movie) => (
+							<Slider.Item movie={movie} key={movie.id}></Slider.Item>
+						))}
+					</Slider>
+				)}
+			</div>
 		</div>
 	)
 }
