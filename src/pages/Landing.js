@@ -4,6 +4,7 @@ import Logo from "../assets/spooky-space-logo.png"
 import Modals from "../components/modal/Modal"
 import LoginForm from "../components/modal/LoginForm"
 import SignUpForm from "../components/modal/SignUpForm"
+import AboutUsModal from "../components/modal/AboutUsModal"
 
 const Landing = () => {
   const handleAction = () => {
@@ -46,11 +47,7 @@ const Landing = () => {
             onCancel={handleCancel}
             trigger={<button className="login-button button">Log In</button>}
           />
-          <Modals
-            title="About Us"
-            body="Information about Spooky Space."
-            onAction={handleAction}
-            onCancel={handleCancel}
+          <AboutUsModal
             trigger={<button className="about-button button">About Us</button>}
           />
         </div>

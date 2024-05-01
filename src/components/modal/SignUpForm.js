@@ -22,17 +22,17 @@ const SignUpForm = () => {
     <div className="form-container">
       <Form onSubmit={handleSubmit(onSubmit)}>
         <FormGroup>
-          <Label for="fullName">Full Name</Label>
+          <Label for="username">Username </Label>
           <Input
-            id="fullName"
-            name="fullName"
+            id="username"
+            name="username"
             type="text"
             className="form-control"
-            {...register("fullName", { required: "Full name is required" })}
-            invalid={errors.fullName ? true : false}
+            {...register("username", { required: "Username is required" })}
+            invalid={errors.username ? true : false}
           />
-          {errors.fullName && (
-            <FormFeedback>{errors.fullName.message}</FormFeedback>
+          {errors.username && (
+            <FormFeedback>{errors.username.message}</FormFeedback>
           )}
         </FormGroup>
         <FormGroup>

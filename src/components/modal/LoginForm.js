@@ -18,18 +18,6 @@ const LoginForm = () => {
     <div className="form-container">
       <Form onSubmit={handleSubmit(onSubmit)}>
         <FormGroup>
-          <Label for="usernameSignIn">Username</Label>
-          <Input
-            id="usernameSignIn"
-            name="username"
-            type="text"
-            className="form-control"
-            invalid={errors.username ? true : false}
-            {...register("username", { required: true })}
-          />
-          {errors.username && <FormFeedback>Username is required</FormFeedback>}
-        </FormGroup>
-        <FormGroup>
           <Label for="emailSignIn">Email</Label>
           <Input
             id="emailSignIn"

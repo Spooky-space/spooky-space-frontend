@@ -6,6 +6,11 @@ const Modals = ({ title, body, trigger, onAction, onCancel }) => {
   const [modal, setModal] = useState(false)
   const toggle = () => setModal(!modal)
 
+  const modalClick = () => {
+    onCancel()
+    toggle()
+  }
+
   return (
     <div>
       {/* Use the provided trigger element */}
@@ -14,15 +19,15 @@ const Modals = ({ title, body, trigger, onAction, onCancel }) => {
         <ModalHeader toggle={toggle}>{title}</ModalHeader>
         <ModalBody>{body}</ModalBody>
         <ModalFooter>
-          <Button
+          {/* <Button
             onClick={() => {
               onAction()
               toggle()
             }}
           >
             Do Something
-          </Button>{" "}
-          <Button
+          </Button>{" "} */}
+          {/* <Button
             className="submit-button"
             onClick={() => {
               onCancel()
@@ -30,7 +35,7 @@ const Modals = ({ title, body, trigger, onAction, onCancel }) => {
             }}
           >
             Cancel
-          </Button>
+          </Button> */}
         </ModalFooter>
       </Modal>
     </div>
