@@ -60,7 +60,8 @@ const Show = () => {
         <img src={imageUrlBase + movie.backdrop_path} 
         alt={movie.title} 
         style={{
-          objectFit: "fill",
+          objectFit: "cover",
+          objectPosition: "center",
           width: "100%",
           height: "35vh",
           marginBottom: "15px"
@@ -72,7 +73,7 @@ const Show = () => {
         <img src={smallImageUrlBase + movie.backdrop_path} 
           alt={movie.title}
           style={{
-            objectFit: "fill",
+            objectFit: "cover",
             width: "150px",
             height: "250px",
             marginRight: "15px"
