@@ -1,6 +1,6 @@
 import React from "react"
 import HorrorMovies from "../components/HorrorMovies"
-import Banner from "../assets/index Red Banner.png"
+import Banner from "../assets/index-Red-Banner.png"
 
 const Home = () => {
 	return (
