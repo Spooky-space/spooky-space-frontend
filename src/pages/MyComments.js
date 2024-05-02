@@ -1,7 +1,7 @@
 import React from "react"
 
-const Index = () => {
+const MyComments = () => {
 	return <div></div>
 }
 
-export default Index
+export default MyComments
