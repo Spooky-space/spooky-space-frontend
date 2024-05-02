@@ -30,7 +30,7 @@ const HorrorMovies = () => {
 					Most Popular
 				</h1>
 				{movies.length > 0 && (
-					<Slider movie={movies} genreList={genreList}>
+					<Slider movie={movies} genreList={genreList} slider={"most-popular"}>
 						{movies.map((movie) => (
 							<Slider.Item movie={movie} key={movie.id}></Slider.Item>
 						))}
@@ -42,7 +42,11 @@ const HorrorMovies = () => {
 					Highest Rated
 				</h1>
 				{movies.length > 0 && (
-					<Slider movie={rating()} genreList={genreList}>
+					<Slider
+						movie={rating()}
+						genreList={genreList}
+						slider={"highest-rated"}
+					>
 						{rating().map((movie) => (
 							<Slider.Item movie={movie} key={movie.id}></Slider.Item>
 						))}
@@ -54,7 +58,7 @@ const HorrorMovies = () => {
 					A to Z
 				</h1>
 				{movies.length > 0 && (
-					<Slider movie={aToZ()} genreList={genreList}>
+					<Slider movie={aToZ()} genreList={genreList} slider={"a-to-z"}>
 						{aToZ().map((movie) => (
 							<Slider.Item movie={movie} key={movie.id}></Slider.Item>
 						))}
