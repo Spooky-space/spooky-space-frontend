@@ -214,10 +214,6 @@ const App = () => {
 	return (
 		<>
 			<Routes>
-				<Route
-					path="/addMovie"
-					element={<AddMovie createList={createList} user={user} />}
-				/>
 				<Route path="/" element={<Landing />} />
 				<Route path="/home" element={<Home />} />
 				<Route path="/show/:id" element={<Show />} />
@@ -243,37 +239,6 @@ const App = () => {
 						}
 					/>
 				)}
-				{/* {user && (
-					<Route
-						path="/show/:id"
-						element={
-							<MyComments
-								comment={comment}
-								user={user}
-								deleteComment={deleteComment}
-							/>
-						}
-					/>
-				)}
-				{user && (
-					<Route
-						path="/addComment"
-						element={<NewComment createComment={createComment} user={user} />}
-					/>
-				)}
-				{user && (
-					<Route
-						path="/comment-edit/:id"
-						element={
-							<EditComment
-								comment={comment}
-								updateComment={updateComment}
-								user={user}
-							/>
-						}
-					/>
-				)} */}
-
 				<Route path="notFound" element={<NotFound />} />
 			</Routes>
 		</>
