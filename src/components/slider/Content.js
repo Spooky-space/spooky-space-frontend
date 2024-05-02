@@ -29,8 +29,12 @@ const Content = ({ movie, onClose, genreList }) => {
 				<div className="content-area-container">
 					<div className="content-description">
 						<div className="content-title">{movie.title}</div>
-						<h3>Release Date: {movie.release_date}</h3>
-						<h3>Rating: {movie.vote_average.toFixed(1)}/10</h3>
+						<h3 className="content-description">
+							Release Date: {movie.release_date}
+						</h3>
+						<h3 className="content-description">
+							Rating: {movie.vote_average.toFixed(1)}/10
+						</h3>
 						<div>
 							<span className="content-span">{genreName[0]}</span>{" "}
 							<span className="content-span">{genreName[1]}</span>{" "}
@@ -45,7 +49,12 @@ const Content = ({ movie, onClose, genreList }) => {
 						</div>
 					</div>
 				</div>
-				<Link to="slider" smooth={true} duration={500}>
+				<Link
+					className="content-close"
+					to="slider"
+					smooth={true}
+					duration={500}
+				>
 					<button className="content-close" onClick={onClose}>
 						<h1>x</h1>
 					</button>
