@@ -5,7 +5,7 @@ import { Link } from "react-scroll"
 
 const imageUrlBase = "https://image.tmdb.org/t/p/original"
 
-const Content = ({ movie, onClose, genreList }) => {
+const Content = ({ movie, onClose, genreList, slider }) => {
 	const genres = genreList.filter(
 		(obj) =>
 			obj[movie.genre_ids[0]] ||
@@ -51,12 +51,12 @@ const Content = ({ movie, onClose, genreList }) => {
 				</div>
 				<Link
 					className="content-close"
-					to="slider"
+					to={slider}
 					smooth={true}
 					duration={500}
 				>
 					<button className="content-close" onClick={onClose}>
-						<h1>x</h1>
+						<h1 className="content-close-x">x</h1>
 					</button>
 				</Link>
 			</div>
