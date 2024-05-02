@@ -333,3 +333,42 @@
   text-align: center;
   padding-bottom: 20px;
 }
+
+
+
+/* HEADER */
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0 10px;
+  padding-bottom: 20px;
+  background: #212020;
+}
+
+.navbar {
+  display: flex;
+}
+
+/* HEADER */
+
+/* FOOTER */
+
+.footer-bar {
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-text {
+
+}
+
+.footer-photo{
+  right: 0%;
+  height: 200px;
+  /* position: absolute; */
+}
+
+/* FOOTER */
