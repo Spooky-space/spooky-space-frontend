@@ -1,189 +1,190 @@
 /* GENERAL */
 .creepster-regular {
-  font-family: "Creepster", system-ui;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Creepster", system-ui;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .nosifer-regular {
-  font-family: "Nosifer", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Nosifer", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .metal-mania-regular {
-  font-family: "Metal Mania", system-ui;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Metal Mania", system-ui;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .cinzel {
-  font-family: "Cinzel", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Cinzel", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .page-body {
-  height: 100%;
-  width: 100%;
-  background-color: #212020;
-  display: flex;
+	height: 100%;
+	width: 100%;
+	background-color: #212020;
+	display: flex;
 }
 
 /* BUTTON */
 .button {
-  border-radius: 6px !important;
-  background: linear-gradient(to right, #ff352e, #ff8a7a) !important;
+	border-radius: 6px !important;
+	background: linear-gradient(to right, #ff352e, #ff8a7a) !important;
 }
 
 .nav-button {
-  border: 2px solid whitesmoke;
-  border-radius: 6px !important;
-  background: transparent;
-  font-family: Creepster;
-  color: whitesmoke;
-  -webkit-text-stroke: 2px black;
-  font-size: 30px;
-  width: 40%;
-  height: 45px;
+	border: 2px solid whitesmoke;
+	border-radius: 6px !important;
+	background: transparent;
+	font-family: Creepster;
+	color: whitesmoke;
+	-webkit-text-stroke: 2px black;
+	font-size: 30px;
+	width: 40%;
+	height: 45px;
 }
 
 /* HOME */
 .home-content {
-  width: 100%;
-  color: whitesmoke;
-  font-family: Metal Mania;
-  justify-content: center;
+	width: 100%;
+	color: whitesmoke;
+	font-family: Metal Mania;
+	justify-content: center;
 }
 
 .home-header {
-  font-family: Nosifer;
-  font-size: xxx-large;
-  color: whitesmoke;
-  width: 100%;
-  text-align: center;
+	font-family: Nosifer;
+	font-size: xxx-large;
+	color: whitesmoke;
+	width: 100%;
+	text-align: center;
 }
 
 .home-slider-header {
-  padding-left: 60px;
-  margin: 0;
-  padding-top: 5px;
+	padding-left: 60px;
+	margin: 0;
+	padding-top: 5px;
+	font-family: Metal Mania;
 }
 
 .home-banner {
-  position: absolute;
-  height: 100% !important;
-  width: 100% !important;
-  border-radius: 10px;
-  object-fit: cover;
+	position: absolute;
+	height: 100% !important;
+	width: 100% !important;
+	border-radius: 10px;
+	object-fit: cover;
 }
 
 .home-banner-container {
-  position: sticky;
-  left: 20% !important;
-  height: 100px;
-  width: 60% !important;
-  justify-content: center;
+	position: sticky;
+	left: 20% !important;
+	height: 100px;
+	width: 60% !important;
+	justify-content: center;
 }
 
 /* LANDING */
 .landing-background {
-  right: 0;
-  background: #212020;
-  z-index: 1;
-  position: fixed;
+	right: 0;
+	background: #212020;
+	z-index: 1;
+	position: fixed;
 }
 
 .landing-background-image-container {
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 100%);
-  z-index: 1;
-  position: fixed;
-  width: 60% !important;
+	mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 100%);
+	z-index: 1;
+	position: fixed;
+	width: 60% !important;
 }
 
 .landing-background-image {
-  background-repeat: no-repeat;
-  height: 100vh;
-  object-fit: cover;
-  width: 100%;
-  z-index: 0;
-  filter: brightness(50%);
+	background-repeat: no-repeat;
+	height: 100vh;
+	object-fit: cover;
+	width: 100%;
+	z-index: 0;
+	filter: brightness(50%);
 }
 
 .landing-content-container {
-  height: 100vh;
-  width: 50%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
+	height: 100vh;
+	width: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
 }
 
 .landing-logo-container {
-  height: 40vh;
-  width: 100%;
-  z-index: 2;
-  display: flex;
-  place-content: center;
-  margin-top: 60px;
+	height: 40vh;
+	width: 100%;
+	z-index: 2;
+	display: flex;
+	place-content: center;
+	margin-top: 60px;
 }
 
 .landing-logo {
-  object-fit: cover;
+	object-fit: cover;
 }
 
 /* BUTTONS */
 .landing-button-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 45vh;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 45vh;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 
 .button {
-  border-radius: 6px;
-  background: linear-gradient(to right, #ff352e, #ff8a7a) !important;
-  font-size: 10px;
-  padding: 10px 20px;
+	border-radius: 6px;
+	background: linear-gradient(to right, #ff352e, #ff8a7a) !important;
+	font-size: 10px;
+	padding: 10px 20px;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
 
 .halloweenText {
-  font-family: "Creepster", cursive;
+	font-family: "Creepster", cursive;
 }
 
 .button {
-  border-radius: 9px;
-  background: linear-gradient(to right, #ff352e, #ff8a7a);
-  display: flex;
-  text-align: right;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 15px;
+	border-radius: 9px;
+	background: linear-gradient(to right, #ff352e, #ff8a7a);
+	display: flex;
+	text-align: right;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 15px;
 }
 
 .about-login {
-  display: inline-block;
-  width: 200px;
-  justify-content: center;
+	display: inline-block;
+	width: 200px;
+	justify-content: center;
 }
 
 .login-button {
-  margin: 0 5px;
+	margin: 0 5px;
 }
 
 .about-button {
-  margin: 0 5px;
+	margin: 0 5px;
 }
 
 /* modal */
@@ -191,8 +192,8 @@
 .modal,
 .fade,
 .show {
-  height: 100vh !important;
-  display: flex !important;
+	height: 100vh !important;
+	display: flex !important;
 }
 
 .modal-dialog {
@@ -225,31 +226,31 @@
   background-color: none !important;
 }
 .form-control {
-  border-radius: 0.25rem;
-  border: 1px solid #ced4da;
-  padding: 0.375rem 0.75rem;
+	border-radius: 0.25rem;
+	border: 1px solid #ced4da;
+	padding: 0.375rem 0.75rem;
 }
 
 /* Highlight inputs on focus */
 .form-control:focus {
-  border-color: #dc3545;
-  box-shadow: 0 0 0 0.2rem rgba(243, 163, 163, 0.438);
+	border-color: #dc3545;
+	box-shadow: 0 0 0 0.2rem rgba(243, 163, 163, 0.438);
 }
 
 /* Error feedback styling */
 .form-feedback {
-  color: #dc3545;
-  font-size: 0.875rem;
+	color: #dc3545;
+	font-size: 0.875rem;
 }
 
 /* Submit button styling */
 .submit-button {
-  background-color: red !important;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0.25rem;
-  transition: background-color 0.2s !important;
+	background-color: red !important;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 0.25rem;
+	transition: background-color 0.2s !important;
 }
 
 .submit-button:hover {
@@ -258,10 +259,10 @@
 
 .button,
 .submit-button {
-  border-radius: 6px;
-  background: linear-gradient(to right, #ff352e, #ff8a7a);
-  font-size: 16px;
-  padding: 10px 20px;
+	border-radius: 6px;
+	background: linear-gradient(to right, #ff352e, #ff8a7a);
+	font-size: 16px;
+	padding: 10px 20px;
 }
 
 .modal-footer .button,
@@ -272,32 +273,32 @@
 /*^Form^*/
 
 .landing-button-container {
-  height: 45vh;
-  width: 90%;
-  position: absolute;
-  bottom: 0;
-  left: 43%;
+	height: 45vh;
+	width: 90%;
+	position: absolute;
+	bottom: 0;
+	left: 43%;
 }
 
 /* NOT FOUND */
 .not-found-background {
-  background-image: url("./assets/not-found-image.webp");
-  display: flex;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
+	background-image: url("./assets/not-found-image.webp");
+	display: flex;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
 }
 
 .not-found-text-container {
-  align-content: flex-end;
-  margin-bottom: 100px;
+	align-content: flex-end;
+	margin-bottom: 100px;
 }
 
 .not-found-text {
-  font-family: Creepster;
-  color: white;
+	font-family: Creepster;
+	color: white;
 }
 
 /* SHOW */
