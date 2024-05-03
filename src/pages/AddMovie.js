@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form"
-import { Col, Form, FormGroup, Label, Row } from "reactstrap"
+import { Col, Form, FormGroup, Label, Row, Input } from "reactstrap"
 import { useNavigate } from "react-router-dom"
 
 const AddMovie = ({ createList, user, movie }) => {
@@ -28,8 +28,8 @@ const AddMovie = ({ createList, user, movie }) => {
 				<Row>
 					<Col md={6}>
 						<FormGroup>
-							<Label for="movie-id">{movie.id}</Label>
-							<input
+							<Label for="movie-id">{/*{movie.id}*/}</Label> 
+							<Input
 								id="movie-id"
 								name="movie-id"
 								placeholder="Movie ID"
@@ -44,11 +44,11 @@ const AddMovie = ({ createList, user, movie }) => {
 					</Col>
 					<Col md={6}>
 						<FormGroup check>
-							<input name="not-watched" type="radio" />{" "}
+							<Input name="not-watched" type="radio" />{" "}
 							<Label check>I haven't seen this movie yet</Label>
 						</FormGroup>
 						<FormGroup check>
-							<input name="watched" type="radio" />{" "}
+							<Input name="watched" type="radio" />{" "}
 							<Label check>I've watched this movie</Label>
 						</FormGroup>
 					</Col>
@@ -57,7 +57,7 @@ const AddMovie = ({ createList, user, movie }) => {
 					<Col>
 						<FormGroup>
 							<Label for="rating"></Label>
-							<input
+							<Input
 								className="form-control"
 								id="rating"
 								name="rating"
@@ -73,7 +73,7 @@ const AddMovie = ({ createList, user, movie }) => {
 								<option>8</option>
 								<option>9</option>
 								<option>10</option>
-							</input>
+							</Input>
 						</FormGroup>
 					</Col>
 				</Row>
