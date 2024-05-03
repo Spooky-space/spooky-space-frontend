@@ -5,6 +5,8 @@ import Home from "./pages/Home.js"
 import Show from "./pages/Show"
 import MyComments from "./pages/MyComments.js"
 import NotFound from "./pages/NotFound"
+import Footer from "./components/Footer.js"
+import Header from "./components/Header.js"
 import MyMovieList from "./pages/MyMovieList.js"
 import AddMovie from "./pages/AddMovie"
 import EditMovie from "./pages/EditList"
@@ -213,6 +215,7 @@ const App = () => {
 	}
 	return (
 		<>
+			<Header logOut={logOut} />
 			<Routes>
 				<Route path="/" element={<Landing />} />
 				<Route path="/home" element={<Home />} />
@@ -241,6 +244,7 @@ const App = () => {
 				)}
 				<Route path="notFound" element={<NotFound />} />
 			</Routes>
+			<Footer />
 		</>
 	)
 }
