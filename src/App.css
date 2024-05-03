@@ -47,6 +47,57 @@
 	font-size: 25px;
 	width: 40%;
 	height: 45px;
+	padding: 10px, 10px;
+}
+
+/* FOOTER */
+
+.footer-bar {
+	position: sticky;
+	height: 75px;
+	display: flex;
+	width: 100% !important;
+	justify-content: space-between;
+	background-color: #212020;
+}
+
+.footer-text {
+	color: whitesmoke;
+}
+
+.footer-photo {
+	height: 100px;
+	width: 300px;
+	margin-top: -25px;
+	object-fit: cover;
+	z-index: 10;
+}
+
+/* HEADER */
+.navbar-container {
+	display: flex;
+	position: sticky;
+	justify-content: flex-end;
+	align-items: flex-start;
+	padding: 0 10px;
+	padding-bottom: 20px;
+	background: #212020;
+	height: 100px;
+}
+
+.header-logo {
+	position: absolute;
+	left: 0;
+	height: 150px;
+	width: 150px;
+	margin-top: -20px;
+	object-fit: cover;
+}
+.button-container {
+	position: absolute;
+	right: -10%;
+	top: 25%;
+	width: 30%;
 }
 
 /* HOME */
@@ -147,19 +198,6 @@
 	position: absolute;
 	bottom: 0;
 	left: 0;
-}
-
-.button {
-	border-radius: 6px;
-	background: linear-gradient(to right, #ff352e, #ff8a7a) !important;
-	font-size: 10px;
-	padding: 10px 20px;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
-
-.halloweenText {
-	font-family: "Creepster", cursive;
 }
 
 .button {
