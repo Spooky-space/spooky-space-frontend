@@ -21,22 +21,21 @@ const Show = () => {
 
   
   useEffect(() => {
-    const fetchMovie = async () => {
-      try {
-        const response = await axios.get(`${apiConfig.baseURL}movie/${id}`, {
-          params: { api_key: apiConfig.api_key },
-          headers: apiConfig.headers,
-        })
-        setMovie(response.data)
-      } catch (error) {
-      } finally {
-        setIsLoading(false)
-      }
-    }
     fetchMovie()
   }, [id])
-  console.log(movie);
 
+  const fetchMovie = async () => {
+    try {
+      const response = await axios.get(`${apiConfig.baseURL}movie/${id}`, {
+        params: { api_key: apiConfig.api_key },
+        headers: apiConfig.headers,
+      })
+      setMovie(response.data)
+    } catch (error) {
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   const handleAddComments = () => {
     const newComment = {
@@ -83,7 +82,11 @@ const Show = () => {
         <div className="movie-details">
           <h1 className="movie-title">{movie.title}</h1>
           <p className="release-date">{movie.release_date}</p>
+          <p className="run-time">{movie.runtime} Minutes</p>
           <p>{movie.vote_average.toFixed(1)} /10</p> 
+          <p className="movie-genre">{movie.genres[0].name}</p>
+          <p className="movie-genre">{movie.genres[1].name}</p>
+          <p className="movie-genre">{movie.genres[2].name}</p>
         </div>
       </div>
 
