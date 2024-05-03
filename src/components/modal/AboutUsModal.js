@@ -65,7 +65,13 @@ const AboutUsModal = ({ trigger }) => {
       {React.cloneElement(trigger, { onClick: toggle })}
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader>
-          {" "}
+          <img
+            src={closeimage}
+            alt="Close"
+            onClick={toggle}
+            style={{ cursor: "pointer", width: "30px", height: "30px" }}
+            className="close-icon"
+          />{" "}
           <h4 className="gradient-text">About Us</h4>
         </ModalHeader>
         <ModalBody>
@@ -118,14 +124,6 @@ const AboutUsModal = ({ trigger }) => {
             toggle={() => toggleNested("amir")}
           />
         </ModalBody>
-        <ModalFooter>
-          <img
-            src={closeimage}
-            alt="Close"
-            onClick={toggle}
-            style={{ cursor: "pointer", width: "30px", height: "30px" }} //
-          />
-        </ModalFooter>
       </Modal>
     </div>
   )

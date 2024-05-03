@@ -44,7 +44,7 @@ const LoginForm = () => {
         </FormGroup>
         <br></br>
         <div className="text-center">
-          <Button type="submit" className="submit-button">
+          <Button type="submit" className="nav-button">
             Submit
           </Button>
         </div>

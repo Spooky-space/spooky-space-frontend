@@ -17,7 +17,9 @@ const MyMovieList = () => {
         body={<EditList />}
         onAction={handleAction}
         onCancel={handleCancel}
-        trigger={<button className="edit-list-button">My Movie List</button>}
+        trigger={
+          <button className="edit-list-button">Edit My Movie List</button>
+        }
       />
     </div>
   )

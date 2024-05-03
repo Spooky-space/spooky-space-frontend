@@ -194,10 +194,10 @@
   height: 100vh !important;
   display: flex !important;
 }
-.modal-content .modal-header {
-  color: #fff;
-}
+
 .gradient-text {
+  order: 1;
+  flex-grow: 1;
   background: linear-gradient(to bottom, white, red);
   -webkit-background-clip: text;
   background-clip: text;
@@ -231,9 +231,31 @@
   gap: 10px;
   color: #fff;
 }
+.modal-header-custom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.close-icon {
+  all: initial;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 2%;
+  top: 1%;
+  transition: all 0.3s ease;
+}
+.close-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
 
 /* Form */
 .form-container {
+  margin-top: -15%;
   background-color: none !important;
   color: #fff;
   font-family: "Metal Mania", system-ui;
@@ -241,32 +263,36 @@
   font-style: normal;
   font-size: 3vh;
   text-shadow: 2px 2px 4px #ff0000;
+  padding-bottom: 40px;
+  display: flex !important;
+  justify-content: center !important;
 }
 .form-control {
   border-radius: 0.25rem;
   border: 1px solid #ced4da;
   padding: 0.375rem 0.75rem;
-  background-color: transparent; /* Makes the background of inputs transparent */
-  color: #fff; /* White text for inputs */
+  background-color: transparent;
+  color: #fff;
   text-shadow: 2px 2px 4px #ff0000;
 }
 .form-control:focus {
   border-color: #dc3545;
   box-shadow: 0 0 0 0.2rem rgba(243, 163, 163, 0.438);
 }
-/* Highlight inputs on focus */
+
 .form-control:focus {
   border-color: #dc3545;
-  box-shadow: 0 0 0 0.2rem rgba(243, 163, 163, 0.438);
+  box-shadow: 0 0 0 0.2rem rgba(239, 3, 3, 0.438) !important;
+}
+input:focus {
+  outline: none;
 }
 
-/* Error feedback styling */
 .form-feedback {
   color: #dc3545 !important;
   font-size: 2vh;
 }
 
-/* Submit button styling */
 .submit-button {
   background-color: red !important;
   color: white;
@@ -293,14 +319,14 @@
   width: auto;
 }
 
-/*^Form^*/
-
-.landing-button-container {
-  height: 45vh;
-  width: 90%;
-  position: absolute;
-  bottom: 0;
-  left: 7%;
+.create-account-submit {
+  font-size: 24px;
+  height: 10%;
+  margin-top: 5px;
+}
+.text-center {
+  display: flex;
+  justify-content: center;
 }
 
 /* NOT FOUND */

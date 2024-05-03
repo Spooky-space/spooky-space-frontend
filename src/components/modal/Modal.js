@@ -15,25 +15,16 @@ const Modals = ({ title, body, trigger, onAction, onCancel }) => {
     <div>
       {React.cloneElement(trigger, { onClick: toggle })}
       <Modal className="modal-content" isOpen={modal} toggle={toggle}>
-        <ModalHeader>
+        <ModalHeader className="modal-header-custom">
           <img
             src={closeimage}
             alt="Close"
             onClick={toggle}
-            style={{ cursor: "pointer", width: "30px", height: "30px" }}
+            className="close-icon"
           />
           <h4 className="gradient-text">{title}</h4>
         </ModalHeader>
         <ModalBody>{body}</ModalBody>
-        {/* <br></br>
-        <ModalFooter>
-          <img
-            src={closeimage}
-            alt="Close"
-            onClick={toggle}
-            style={{ cursor: "pointer", width: "30px", height: "30px" }}
-          />
-        </ModalFooter> */}
       </Modal>
     </div>
   )

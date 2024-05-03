@@ -22,6 +22,9 @@ const SignUpForm = () => {
     <div className="form-container">
       <Form onSubmit={handleSubmit(onSubmit)}>
         <FormGroup>
+          <br></br>
+          <br></br>
+          <br></br>
           <Label for="username">Username </Label>
           <Input
             id="username"
@@ -35,6 +38,7 @@ const SignUpForm = () => {
             <FormFeedback>{errors.username.message}</FormFeedback>
           )}
         </FormGroup>
+        <br></br>
         <FormGroup>
           <Label for="emailSignUp">Email</Label>
           <Input
@@ -47,6 +51,7 @@ const SignUpForm = () => {
           />
           {errors.email && <FormFeedback>{errors.email.message}</FormFeedback>}
         </FormGroup>
+        <br></br>
         <FormGroup>
           <Label for="passwordSignUp">Password</Label>
           <Input
@@ -67,6 +72,7 @@ const SignUpForm = () => {
             <FormFeedback>{errors.password.message}</FormFeedback>
           )}
         </FormGroup>
+        <br></br>
         <FormGroup>
           <Label for="passwordConfirm">Confirm Password</Label>
           <Input
@@ -88,8 +94,8 @@ const SignUpForm = () => {
             ))}
         </FormGroup>
         <div className="text-center">
-          <Button type="submit" className="submit-button">
-            Create Account
+          <Button type="submit" className="nav-button create-account-submit">
+            Sign Up
           </Button>
         </div>
       </Form>
