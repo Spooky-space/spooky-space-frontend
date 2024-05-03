@@ -29,6 +29,7 @@ const LoginForm = () => {
           />
           {errors.email && <FormFeedback>Email is required</FormFeedback>}
         </FormGroup>
+        <br></br>
         <FormGroup>
           <Label for="passwordSignIn">Password</Label>
           <Input
@@ -41,8 +42,9 @@ const LoginForm = () => {
           />
           {errors.password && <FormFeedback>Password is required</FormFeedback>}
         </FormGroup>
+        <br></br>
         <div className="text-center">
-          <Button type="submit" className="submit-button">
+          <Button type="submit" className="nav-button">
             Submit
           </Button>
         </div>
