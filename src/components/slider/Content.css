@@ -43,15 +43,19 @@
 	left: 0;
 	right: 0;
 	height: 100%;
+	z-index: 10 !important;
 }
 .content-area-container {
 	padding: 30px 30px;
 }
 .content-title {
-	font-size: 60px;
+	font-size: 68px;
+	text-wrap: wrap;
 	color: whitesmoke;
-	font-weight: 700;
 	font-family: Metal Mania;
+	-webkit-text-stroke: 4px black;
+	height: 50px;
+	width: 200%;
 }
 
 .content-description {
@@ -60,7 +64,7 @@
 	color: whitesmoke;
 	margin-top: 20px;
 	max-width: 300px;
-	z-index: 10 !important;
+	padding: 5px;
 }
 .content-close {
 	color: whitesmoke;
@@ -87,5 +91,13 @@
 .content-span {
 	border: 1px solid whitesmoke !important;
 	border-radius: 5px;
+	display: block;
 	font-weight: 500;
+	margin-top: 2%;
+	width: 30%;
+	text-align: center;
+}
+.span-container {
+	/* padding-top: 10px; */
+	/* padding-bottom: 10px; */
 }

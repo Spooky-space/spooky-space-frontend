@@ -41,10 +41,10 @@
 	border: 2px solid whitesmoke;
 	border-radius: 6px !important;
 	background: transparent;
-	font-family: Creepster;
+	font-family: Metal Mania;
 	color: whitesmoke;
-	-webkit-text-stroke: 2px black;
-	font-size: 30px;
+	-webkit-text-stroke: 1px black;
+	font-size: 25px;
 	width: 40%;
 	height: 45px;
 }
@@ -197,33 +197,33 @@
 }
 
 .modal-dialog {
-  place-content: center;
-  position: absolute;
-  width: 25% !important;
-  background-image: url("../src/assets/modalbg.png");
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  margin: auto !important;
-  position: relative !important;
-  border: 2px solid red;
+	place-content: center;
+	position: absolute;
+	width: 25% !important;
+	background-image: url("../src/assets/modalbg.png");
+	background-size: cover;
+	background-position: center;
+	padding: 20px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	margin: auto !important;
+	position: relative !important;
+	border: 2px solid red;
 }
 
 .modal-body {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
 }
 
 /* Form */
 .form-container {
-  background-color: none !important;
+	background-color: none !important;
 }
 .form-control {
 	border-radius: 0.25rem;
@@ -254,7 +254,7 @@
 }
 
 .submit-button:hover {
-  background-color: gray !important;
+	background-color: gray !important;
 }
 
 .button,
@@ -267,7 +267,7 @@
 
 .modal-footer .button,
 .modal-footer .submit-button {
-  width: auto;
+	width: auto;
 }
 
 /*^Form^*/
@@ -303,92 +303,91 @@
 
 /* SHOW */
 .show-body {
-  height: 200vh;
-  background-color: #212020;
-  color: whitesmoke;
-  display: flex;
-  flex-direction: column;
+	height: 200vh;
+	background-color: #212020;
+	color: whitesmoke;
+	display: flex;
+	flex-direction: column;
 }
 
 .show-background,
 .show-background-shadow,
 .show-background-image,
 .movie-info {
-  position: absolute;
-  top: 0;
-  bottom: 0;
+	position: absolute;
+	top: 0;
+	bottom: 0;
 }
 
 .show-background-image {
-  width: 100%;
-  background-position: center 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-  position: absolute;
+	width: 100%;
+	background-position: center 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+	position: absolute;
 }
 
 .show-background {
-  left: 0;
-  right: 0;
+	left: 0;
+	right: 0;
 }
 
 .show-background-shadow {
-  top: 0;
-  width: 100%;
-  height: 30%;
-  background: #212020;
+	top: 0;
+	width: 100%;
+	height: 30%;
+	background: #212020;
 }
 
 .show-background-shadow:before {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  background-image: linear-gradient(to top, #212020 20%, transparent);
-  width: 100%;
-  height: 335%;
+	content: "";
+	position: absolute;
+	z-index: 2;
+	background-image: linear-gradient(to top, #212020 20%, transparent);
+	width: 100%;
+	height: 335%;
 }
 
 .movie-info {
-  display: flex;
-  margin-left: 15%;
-  margin-top: 15%;
-  z-index: 3;
+	display: flex;
+	margin-left: 15%;
+	margin-top: 15%;
+	z-index: 3;
 }
 
 .movie-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 3;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 3;
 }
 
 .movie-title {
-  font-weight: 900;
-  font-size: 40px;
+	font-weight: 900;
+	font-size: 40px;
 }
 
 .release-date {
-  font-size: 25px;
+	font-size: 25px;
 }
 
 .overview-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-top: 40%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 40%;
 }
 
 .overview {
-  max-width: 50%;
-  text-align: center;
-  z-index: 3;
+	max-width: 50%;
+	text-align: center;
+	z-index: 3;
 }
 
 .comment-section {
-  margin-top: 2% !important;
-  margin: auto;
-  width: 50%;
-  z-index: 3;
+	margin-top: 2% !important;
+	margin: auto;
+	width: 50%;
+	z-index: 3;
 }
-
