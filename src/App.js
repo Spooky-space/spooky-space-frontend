@@ -5,6 +5,8 @@ import Home from "./pages/Home.js"
 import Show from "./pages/Show"
 import MyComments from "./pages/MyComments.js"
 import NotFound from "./pages/NotFound"
+import Footer from "./components/Footer.js"
+import Header from "./components/Header.js"
 import MyMovieList from "./pages/MyMovieList.js"
 import AddMovie from "./pages/AddMovie"
 import EditMovie from "./components/modal/EditList.js"
@@ -198,51 +200,53 @@ const App = () => {
     }
   }
 
-  const deleteComment = async (id) => {
-    try {
-      const response = await fetch(`http://localhost:3000/forums/${id}`, {
-        method: "DELETE",
-      })
-      if (!response.ok) {
-        throw new Error("Error on the delete request")
-      }
-      getComment()
-    } catch (error) {
-      alert("Opps something went wrong", error.message)
-    }
-  }
-  return (
-    <>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/show/:id" element={<Show />} />
-        {user && (
-          <Route
-            path="/myMovieList"
-            element={
-              <MyMovieList list={list} user={user} deletelist={deleteList} />
-            }
-          />
-        )}
-        {user && (
-          <Route
-            path="/addMovie"
-            element={<AddMovie createList={createList} user={user} />}
-          />
-        )}
-        {user && (
-          <Route
-            path="/list-edit/:id"
-            element={
-              <EditMovie list={list} updateList={updateList} user={user} />
-            }
-          />
-        )}
-        <Route path="notFound" element={<NotFound />} />
-      </Routes>
-    </>
-  )
+	const deleteComment = async (id) => {
+		try {
+			const response = await fetch(`http://localhost:3000/forums/${id}`, {
+				method: "DELETE",
+			})
+			if (!response.ok) {
+				throw new Error("Error on the delete request")
+			}
+			getComment()
+		} catch (error) {
+			alert("Opps something went wrong", error.message)
+		}
+	}
+	return (
+		<>
+			<Header logOut={logOut} />
+			<Routes>
+				<Route path="/" element={<Landing />} />
+				<Route path="/home" element={<Home />} />
+				<Route path="/show/:id" element={<Show />} />
+				{user && (
+					<Route
+						path="/myMovieList"
+						element={
+							<MyMovieList list={list} user={user} deletelist={deleteList} />
+						}
+					/>
+				)}
+				{user && (
+					<Route
+						path="/addMovie"
+						element={<AddMovie createList={createList} user={user} />}
+					/>
+				)}
+				{user && (
+					<Route
+						path="/list-edit/:id"
+						element={
+							<EditMovie list={list} updateList={updateList} user={user} />
+						}
+					/>
+				)}
+				<Route path="notFound" element={<NotFound />} />
+			</Routes>
+			<Footer />
+		</>
+	)
 }
 
 export default App

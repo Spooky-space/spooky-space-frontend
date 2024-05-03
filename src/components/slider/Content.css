@@ -1,7 +1,7 @@
 .content {
 	position: relative;
 	height: 37vw;
-	margin-top: -4%;
+	margin-top: -3%;
 	z-index: 0 !important;
 }
 .content-background,
@@ -32,7 +32,7 @@
 .content-background-shadow:before {
 	content: "";
 	position: absolute;
-	z-index: 10;
+	z-index: 1;
 	background-image: linear-gradient(to right, #212020, transparent);
 	top: 0;
 	bottom: 0;
@@ -43,27 +43,28 @@
 	left: 0;
 	right: 0;
 	height: 100%;
+	z-index: 10 !important;
 }
 .content-area-container {
-	padding: 30px 70px;
+	padding: 30px 30px;
 }
 .content-title {
-	font-size: 60px;
+	font-size: 68px;
+	text-wrap: wrap;
 	color: whitesmoke;
-	font-weight: 700;
 	font-family: Metal Mania;
+	-webkit-text-stroke: 4px black;
+	height: 50px;
+	width: 200%;
 }
 
 .content-description {
 	font-size: 18px;
-	font-family: Cinzel;
+	font-family: Cinzel !important;
 	color: whitesmoke;
 	margin-top: 20px;
 	max-width: 300px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis !important;
-	text-align: center;
+	padding: 5px;
 }
 .content-close {
 	color: whitesmoke;
@@ -73,11 +74,15 @@
 	outline: none;
 	border: none;
 	position: absolute;
-	top: -3%;
+	top: 3%;
 	right: 2%;
 	font-size: 30px;
-	font-family: inherit;
+	font-family: Metal Mania !important;
 	scroll-behavior: smooth !important;
+}
+.content-close-x {
+	font-family: inherit !important;
+	font-size: 40px;
 }
 .content-button {
 	width: auto;
@@ -86,5 +91,13 @@
 .content-span {
 	border: 1px solid whitesmoke !important;
 	border-radius: 5px;
+	display: block;
 	font-weight: 500;
+	margin-top: 2%;
+	width: 30%;
+	text-align: center;
+}
+.span-container {
+	/* padding-top: 10px; */
+	/* padding-bottom: 10px; */
 }

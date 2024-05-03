@@ -8,7 +8,7 @@ import useSliding from "./useSliding"
 import useSizeElement from "./useSizeElement"
 import "./Slider.css"
 
-const Slider = ({ children, genreList }) => {
+const Slider = ({ children, genreList, slider }) => {
 	// state for the current slide
 	const [currentSlide, setCurrentSlide] = useState()
 	// state to handle our useSizeElement
@@ -56,6 +56,7 @@ const Slider = ({ children, genreList }) => {
 					movie={currentSlide}
 					onClose={handleClose}
 					genreList={genreList}
+					slider={slider}
 				/>
 			)}
 		</SliderContext.Provider>

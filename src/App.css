@@ -1,189 +1,228 @@
 /* GENERAL */
 .creepster-regular {
-  font-family: "Creepster", system-ui;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Creepster", system-ui;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .nosifer-regular {
-  font-family: "Nosifer", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Nosifer", sans-serif;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .metal-mania-regular {
-  font-family: "Metal Mania", system-ui;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Metal Mania", system-ui;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .cinzel {
-  font-family: "Cinzel", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+	font-family: "Cinzel", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
 }
 
 .page-body {
-  height: 100%;
-  width: 100%;
-  background-color: #212020;
-  display: flex;
+	height: 100%;
+	width: 100%;
+	background-color: #212020;
+	display: flex;
 }
 
 /* BUTTON */
 .button {
-  border-radius: 6px !important;
-  background: linear-gradient(to right, #ff352e, #ff8a7a) !important;
+	border-radius: 6px !important;
+	background: linear-gradient(to right, #ff352e, #ff8a7a) !important;
 }
 
 .nav-button {
-  border: 2px solid whitesmoke;
-  border-radius: 6px !important;
-  background: transparent;
-  font-family: Creepster;
-  color: whitesmoke;
-  -webkit-text-stroke: 2px black;
-  font-size: 30px;
-  width: 40%;
-  height: 45px;
+	border: 2px solid whitesmoke;
+	border-radius: 6px !important;
+	background: transparent;
+	font-family: Metal Mania;
+	color: whitesmoke;
+	-webkit-text-stroke: 1px black;
+	font-size: 25px;
+	width: 40%;
+	height: 45px;
+	padding: 10px, 10px;
+}
+
+/* FOOTER */
+
+.footer-bar {
+	position: sticky;
+	height: 75px;
+	display: flex;
+	width: 100% !important;
+	justify-content: space-between;
+	background-color: #212020;
+}
+
+.footer-text {
+	color: whitesmoke;
+}
+
+.footer-photo {
+	height: 100px;
+	width: 300px;
+	margin-top: -25px;
+	object-fit: cover;
+	z-index: 10;
+}
+
+/* HEADER */
+.navbar-container {
+	display: flex;
+	position: sticky;
+	justify-content: flex-end;
+	align-items: flex-start;
+	padding: 0 10px;
+	padding-bottom: 20px;
+	background: #212020;
+	height: 100px;
+}
+
+.header-logo {
+	position: absolute;
+	left: 0;
+	height: 150px;
+	width: 150px;
+	margin-top: -20px;
+	object-fit: cover;
+}
+.button-container {
+	position: absolute;
+	right: -10%;
+	top: 25%;
+	width: 30%;
 }
 
 /* HOME */
 .home-content {
-  width: 100%;
-  color: whitesmoke;
-  font-family: Metal Mania;
-  justify-content: center;
+	width: 100%;
+	color: whitesmoke;
+	font-family: Metal Mania;
+	justify-content: center;
 }
 
 .home-header {
-  font-family: Nosifer;
-  font-size: xxx-large;
-  color: whitesmoke;
-  width: 100%;
-  text-align: center;
+	font-family: Nosifer;
+	font-size: xxx-large;
+	color: whitesmoke;
+	width: 100%;
+	text-align: center;
 }
 
 .home-slider-header {
-  padding-left: 60px;
-  margin: 0;
-  padding-top: 5px;
+	padding-left: 60px;
+	margin: 0;
+	padding-top: 5px;
+	font-family: Metal Mania;
 }
 
 .home-banner {
-  position: absolute;
-  height: 100% !important;
-  width: 100% !important;
-  border-radius: 10px;
-  object-fit: cover;
+	position: absolute;
+	height: 100% !important;
+	width: 100% !important;
+	border-radius: 10px;
+	object-fit: cover;
 }
 
 .home-banner-container {
-  position: sticky;
-  left: 20% !important;
-  height: 100px;
-  width: 60% !important;
-  justify-content: center;
+	position: sticky;
+	left: 20% !important;
+	height: 100px;
+	width: 60% !important;
+	justify-content: center;
 }
 
 /* LANDING */
 .landing-background {
-  right: 0;
-  background: #212020;
-  z-index: 1;
-  position: fixed;
+	right: 0;
+	background: #212020;
+	z-index: 1;
+	position: fixed;
 }
 
 .landing-background-image-container {
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 100%);
-  z-index: 1;
-  position: fixed;
-  width: 60% !important;
+	mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 50%, transparent 100%);
+	z-index: 1;
+	position: fixed;
+	width: 60% !important;
 }
 
 .landing-background-image {
-  background-repeat: no-repeat;
-  height: 100vh;
-  object-fit: cover;
-  width: 100%;
-  z-index: 0;
-  filter: brightness(50%);
+	background-repeat: no-repeat;
+	height: 100vh;
+	object-fit: cover;
+	width: 100%;
+	z-index: 0;
+	filter: brightness(50%);
 }
 
 .landing-content-container {
-  height: 100vh;
-  width: 50%;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
+	height: 100vh;
+	width: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	display: flex;
+	justify-content: center;
 }
 
 .landing-logo-container {
-  height: 40vh;
-  width: 100%;
-  z-index: 2;
-  display: flex;
-  place-content: center;
-  margin-top: 60px;
+	height: 40vh;
+	width: 100%;
+	z-index: 2;
+	display: flex;
+	place-content: center;
+	margin-top: 60px;
 }
 
 .landing-logo {
-  object-fit: cover;
+	object-fit: cover;
 }
 
 /* BUTTONS */
 .landing-button-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  height: 45vh;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 45vh;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 }
 
 .button {
-  border-radius: 6px;
-  background: linear-gradient(to right, #ff352e, #ff8a7a) !important;
-  font-size: 10px;
-  padding: 10px 20px;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
-
-.halloweenText {
-  font-family: "Creepster", cursive;
-}
-
-.button {
-  border-radius: 9px;
-  background: linear-gradient(to right, #ff352e, #ff8a7a);
-  display: flex;
-  text-align: right;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 15px;
+	border-radius: 9px;
+	background: linear-gradient(to right, #ff352e, #ff8a7a);
+	display: flex;
+	text-align: right;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px 15px;
 }
 
 .about-login {
-  display: inline-block;
-  width: 200px;
-  justify-content: center;
+	display: inline-block;
+	width: 200px;
+	justify-content: center;
 }
 
 .login-button {
-  margin: 0 5px;
+	margin: 0 5px;
 }
 
 .about-button {
-  margin: 0 5px;
+	margin: 0 5px;
 }
 
 /* modal */
@@ -191,8 +230,8 @@
 .modal,
 .fade,
 .show {
-  height: 100vh !important;
-  display: flex !important;
+	height: 100vh !important;
+	display: flex !important;
 }
 
 .gradient-text {
@@ -255,6 +294,7 @@
 
 /* Form */
 .form-container {
+
   margin-top: -15%;
   background-color: none !important;
   color: #fff;
@@ -274,10 +314,11 @@
   background-color: transparent;
   color: #fff;
   text-shadow: 2px 2px 4px #ff0000;
+
 }
 .form-control:focus {
-  border-color: #dc3545;
-  box-shadow: 0 0 0 0.2rem rgba(243, 163, 163, 0.438);
+	border-color: #dc3545;
+	box-shadow: 0 0 0 0.2rem rgba(243, 163, 163, 0.438);
 }
 
 .form-control:focus {
@@ -294,30 +335,31 @@ input:focus {
 }
 
 .submit-button {
-  background-color: red !important;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 0.25rem;
-  transition: background-color 0.2s !important;
+	background-color: red !important;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 0.25rem;
+	transition: background-color 0.2s !important;
 }
 
 .submit-button:hover {
-  background-color: gray !important;
+	background-color: gray !important;
 }
 
 .button,
 .submit-button {
-  border-radius: 6px;
-  background: linear-gradient(to right, #ff352e, #ff8a7a);
-  font-size: 16px;
-  padding: 10px 20px;
+	border-radius: 6px;
+	background: linear-gradient(to right, #ff352e, #ff8a7a);
+	font-size: 16px;
+	padding: 10px 20px;
 }
 
 .modal-footer .button,
 .modal-footer .submit-button {
-  width: auto;
+	width: auto;
 }
+
 
 .create-account-submit {
   font-size: 24px;
@@ -331,70 +373,112 @@ input:focus {
 
 /* NOT FOUND */
 .not-found-background {
-  background-image: url("./assets/not-found-image.webp");
-  display: flex;
-  justify-content: center;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 100vh;
+	background-image: url("./assets/not-found-image.webp");
+	display: flex;
+	justify-content: center;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
 }
 
 .not-found-text-container {
-  align-content: flex-end;
-  margin-bottom: 100px;
+	align-content: flex-end;
+	margin-bottom: 100px;
 }
 
 .not-found-text {
-  font-family: Creepster;
-  color: white;
+	font-family: Creepster;
+	color: white;
 }
 
 /* SHOW */
 .show-body {
-  width: 100%;
-  height: 100%;
-  background-color: rgb(45, 45, 45);
-  color: whitesmoke;
+	height: 200vh;
+	background-color: #212020;
+	color: whitesmoke;
+	display: flex;
+	flex-direction: column;
+}
+
+.show-background,
+.show-background-shadow,
+.show-background-image,
+.movie-info {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+.show-background-image {
+	width: 100%;
+	background-position: center 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 1;
+	position: absolute;
+}
+
+.show-background {
+	left: 0;
+	right: 0;
+}
+
+.show-background-shadow {
+	top: 0;
+	width: 100%;
+	height: 30%;
+	background: #212020;
+}
+
+.show-background-shadow:before {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	background-image: linear-gradient(to top, #212020 20%, transparent);
+	width: 100%;
+	height: 335%;
 }
 
 .movie-info {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+	display: flex;
+	margin-left: 15%;
+	margin-top: 15%;
+	z-index: 3;
 }
 
 .movie-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.movie-title,
-.release-date {
-  margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 3;
 }
 
 .movie-title {
-  display: flex;
-  font-weight: 800;
+	font-weight: 900;
+	font-size: 40px;
 }
 
 .release-date {
-  display: flex;
-  font-size: 25px;
-  margin-top: 15px;
+	font-size: 25px;
 }
 
 .overview-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin-top: 40%;
 }
 
 .overview {
-  max-width: 50%;
-  text-align: center;
-  padding-bottom: 20px;
+	max-width: 50%;
+	text-align: center;
+	z-index: 3;
+}
+
+.comment-section {
+	margin-top: 2% !important;
+	margin: auto;
+	width: 50%;
+	z-index: 3;
 }
