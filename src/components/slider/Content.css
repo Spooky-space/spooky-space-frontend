@@ -1,7 +1,7 @@
 .content {
 	position: relative;
 	height: 37vw;
-	margin-top: -4%;
+	margin-top: -3%;
 	z-index: 0 !important;
 }
 .content-background,
@@ -32,7 +32,7 @@
 .content-background-shadow:before {
 	content: "";
 	position: absolute;
-	z-index: 10;
+	z-index: 1;
 	background-image: linear-gradient(to right, #212020, transparent);
 	top: 0;
 	bottom: 0;
@@ -45,7 +45,7 @@
 	height: 100%;
 }
 .content-area-container {
-	padding: 30px 70px;
+	padding: 30px 30px;
 }
 .content-title {
 	font-size: 60px;
@@ -56,14 +56,11 @@
 
 .content-description {
 	font-size: 18px;
-	font-family: Cinzel;
+	font-family: Cinzel !important;
 	color: whitesmoke;
 	margin-top: 20px;
 	max-width: 300px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis !important;
-	text-align: center;
+	z-index: 10 !important;
 }
 .content-close {
 	color: whitesmoke;
@@ -73,11 +70,15 @@
 	outline: none;
 	border: none;
 	position: absolute;
-	top: -3%;
+	top: 3%;
 	right: 2%;
 	font-size: 30px;
-	font-family: inherit;
+	font-family: Metal Mania !important;
 	scroll-behavior: smooth !important;
+}
+.content-close-x {
+	font-family: inherit !important;
+	font-size: 40px;
 }
 .content-button {
 	width: auto;

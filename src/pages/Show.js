@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import axios from "axios"
 import { apiConfig } from "../apiConfig"
 import { Comment, Form, Button, Header } from "semantic-ui-react"
+import spookyUser from "../assets/spooky.png"
 
 const Show = () => {
   const imageUrlBase = "https://image.tmdb.org/t/p/original"
@@ -56,26 +57,21 @@ const Show = () => {
 
   return (
     <div className="show-body">
-      <div className="img-container">
-        <img src={imageUrlBase + movie.backdrop_path} 
-        alt={movie.title} 
-        style={{
-          objectFit: "fill",
-          width: "100%",
-          height: "35vh",
-          marginBottom: "15px"
-        }}
-        />
+      <div className="show-background">
+      <div className="show-background-shadow" />
+      <div className="show-background-image" style={{
+        backgroundImage: `url(${imageUrlBase + movie.backdrop_path})`,
+      }} />
       </div>
 
       <div className="movie-info">
-        <img src={smallImageUrlBase + movie.backdrop_path} 
+        <img src={smallImageUrlBase + movie.poster_path} 
           alt={movie.title}
           style={{
-            objectFit: "fill",
-            width: "150px",
-            height: "250px",
-            marginRight: "15px"
+            objectFit: "cover",
+            width: "200px",
+            height: "300px",
+            marginRight: "15px",
           }}
         />
 
@@ -97,18 +93,51 @@ const Show = () => {
             <Form reply>
               <Form.TextArea value={commentText} 
               onChange={(e) => setCommentText(e.target.value)}
+              style={{
+                background: "rgba(10,10,10,0.7)",
+                color: "whitesmoke"
+              }}
               />
               <Button content="Add A Comment" labelPosition="center" icon="edit" primary onClick={handleAddComments} />
             </Form>
+              <br />
 
             {comments.map(comment => (
-              <Comment key={comment.id}>
-                <Comment.Content>
-                  <Comment.Text>{comment.text}</Comment.Text>
-                  <Comment.Metadata>
-                    <div>{comment.date.toLocaleString()}</div>
+              <Comment key={comment.id}
+              style={{
+                width: "100%",
+                border: "2px solid whitesmoke",
+                borderRadius: "10px",
+                padding: "0"
+              }}
+              >
+                <div
+                  style={{
+                    height: "5vh !important", 
+                    
+                  }}
+                >
+                  
+                  <Comment.Metadata
+                  style={{
+                    color: "whitesmoke",
+                    width: "100%"
+                  }}
+                  >
+
+                    <div style={{display: "flex", alignItems: "flex-end", width: "100% !important", height: "10% !important"}}>
+                      <img src={spookyUser} style={{objectFit: "scale-down", height: "50px", borderRadius: "50%"}} /> 
+                      <h2 style={{fontFamily: "Metal Mania", marginBottom: "5px", padding: "0 5px"}}>{"Seth"}</h2>{" "}<p style={{fontFamily: "Cinzel", marginBottom: "10px"}}>{comment.date.toLocaleString()}</p></div>
                   </Comment.Metadata>
-                </Comment.Content>
+                  <Comment.Text 
+                  style={{
+                    margin: ".5em", 
+                    color: "whitesmoke",
+                    fontFamily: "Cinzel",
+                    fontSize: "20px"
+                  }}
+                >{comment.text}</Comment.Text>
+                </div>
               </Comment>
             ))}
           </Comment.Group>
