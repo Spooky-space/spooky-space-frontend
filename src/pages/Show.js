@@ -4,18 +4,22 @@ import axios from "axios"
 import { apiConfig } from "../apiConfig"
 import { Comment, Form, Button, Header } from "semantic-ui-react"
 import spookyUser from "../assets/spooky.png"
+import useHorrorMovies from "../tmdbService"
+import AddMovie from "./AddMovie"
+
 
 const Show = () => {
   const imageUrlBase = "https://image.tmdb.org/t/p/original"
   const smallImageUrlBase = "https://image.tmdb.org/t/p/w500"
 
+	const { genreList } = useHorrorMovies()
   const { id } = useParams()
   const [movie, setMovie] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
   const [comments, setComments] = useState([])
   const [commentText, setCommentText] = useState("")
 
-
+  
   useEffect(() => {
     const fetchMovie = async () => {
       try {
@@ -25,13 +29,14 @@ const Show = () => {
         })
         setMovie(response.data)
       } catch (error) {
-        console.error("failed to fetch movie", error)
       } finally {
         setIsLoading(false)
       }
     }
     fetchMovie()
   }, [id])
+  console.log(movie);
+
 
   const handleAddComments = () => {
     const newComment = {
@@ -78,7 +83,7 @@ const Show = () => {
         <div className="movie-details">
           <h1 className="movie-title">{movie.title}</h1>
           <p className="release-date">{movie.release_date}</p>
-          <p>{movie.vote_average.toFixed(1)} /10</p>
+          <p>{movie.vote_average.toFixed(1)} /10</p> 
         </div>
       </div>
 
@@ -98,7 +103,7 @@ const Show = () => {
                 color: "whitesmoke"
               }}
               />
-              <Button content="Add A Comment" labelPosition="center" icon="edit" primary onClick={handleAddComments} />
+              <Button content="Add A Comment" labelPosition="left" icon="edit" primary onClick={handleAddComments} />
             </Form>
               <br />
 
@@ -141,6 +146,7 @@ const Show = () => {
               </Comment>
             ))}
           </Comment.Group>
+          <AddMovie movie={movie} />
         </div>
     </div>
   )
