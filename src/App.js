@@ -215,7 +215,7 @@ const App = () => {
 	}
 	return (
 		<>
-			<Header />
+			<Header logOut={logOut} />
 			<Routes>
 				<Route path="/" element={<Landing />} />
 				<Route path="/home" element={<Home />} />

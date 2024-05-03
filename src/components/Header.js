@@ -5,7 +5,7 @@ import NavButton from "./NavButton"
 import { NavLink } from "react-router-dom"
 import { Modal } from "reactstrap"
 
-const Header = () => {
+const Header = ({ logOut }) => {
 	return (
 		<>
 			<div className="navbar-container">
@@ -15,7 +15,7 @@ const Header = () => {
 				<div className="button-container">
 					<Modal />
 					<NavButton
-						to="MyMovieList"
+						to="myMovieList"
 						buttonContent={"My Movies"}
 						className="nav-button"
 					>
@@ -23,7 +23,7 @@ const Header = () => {
 					</NavButton>
 					<span>___</span>
 					<NavButton
-						to="LogOut"
+						to={logOut}
 						buttonContent={"LogOut"}
 						className="nav-button"
 						href="#contact"
