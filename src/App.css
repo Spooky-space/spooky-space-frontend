@@ -194,11 +194,22 @@
   height: 100vh !important;
   display: flex !important;
 }
-
+.modal-content .modal-header {
+  color: #fff;
+}
+.gradient-text {
+  background: linear-gradient(to bottom, white, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 24px;
+  font-family: "Nosifer", sans-serif;
+}
 .modal-dialog {
   place-content: center;
   position: absolute;
   width: 25% !important;
+  height: 50vh;
   background-image: url("../src/assets/modalbg.png");
   background-size: cover;
   background-position: center;
@@ -218,18 +229,31 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  color: #fff;
 }
 
 /* Form */
 .form-container {
   background-color: none !important;
+  color: #fff;
+  font-family: "Metal Mania", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 3vh;
+  text-shadow: 2px 2px 4px #ff0000;
 }
 .form-control {
   border-radius: 0.25rem;
   border: 1px solid #ced4da;
   padding: 0.375rem 0.75rem;
+  background-color: transparent; /* Makes the background of inputs transparent */
+  color: #fff; /* White text for inputs */
+  text-shadow: 2px 2px 4px #ff0000;
 }
-
+.form-control:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(243, 163, 163, 0.438);
+}
 /* Highlight inputs on focus */
 .form-control:focus {
   border-color: #dc3545;
@@ -238,8 +262,8 @@
 
 /* Error feedback styling */
 .form-feedback {
-  color: #dc3545;
-  font-size: 0.875rem;
+  color: #dc3545 !important;
+  font-size: 2vh;
 }
 
 /* Submit button styling */
@@ -276,7 +300,7 @@
   width: 90%;
   position: absolute;
   bottom: 0;
-  left: 43%;
+  left: 7%;
 }
 
 /* NOT FOUND */

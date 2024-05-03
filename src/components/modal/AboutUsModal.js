@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
+import closeimage from "../modal/closeimage.png"
 
 const AboutUsModal = ({ trigger }) => {
   const [modal, setModal] = useState(false)
@@ -39,10 +40,20 @@ const AboutUsModal = ({ trigger }) => {
 
   const TeamMemberModal = ({ member, isOpen, toggle }) => (
     <Modal isOpen={isOpen} toggle={toggle}>
-      <ModalHeader toggle={toggle}>{teamDetails[member].title}</ModalHeader>
-      <ModalBody>{teamDetails[member].content}</ModalBody>
+      <ModalHeader>
+        {" "}
+        <h1 style={{ textShadow: "2px 2px 4px #FF0000", fontSize: "24px" }}>
+          {teamDetails[member].title}
+        </h1>{" "}
+      </ModalHeader>
+      <br></br>
+      <ModalBody>
+        <h1 style={{ textShadow: "2px 2px 4px #FF0000", fontSize: "24px" }}>
+          {teamDetails[member].content}
+        </h1>
+      </ModalBody>
       <ModalFooter>
-        <Button color="primary" onClick={toggle}>
+        <Button className="submit-button" onClick={toggle}>
           Close
         </Button>
       </ModalFooter>
@@ -53,9 +64,14 @@ const AboutUsModal = ({ trigger }) => {
     <div>
       {React.cloneElement(trigger, { onClick: toggle })}
       <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>About Us</ModalHeader>
+        <ModalHeader>
+          {" "}
+          <h4 className="gradient-text">About Us</h4>
+        </ModalHeader>
         <ModalBody>
-          <div>General information about the company...</div>
+          <p style={{ textShadow: "2px 2px 4px #FF0000", fontSize: "3vh" }}>
+            General information about the company...
+          </p>
           <Button
             className="submit-button"
             onClick={() => toggleNested("matt")}
@@ -80,7 +96,7 @@ const AboutUsModal = ({ trigger }) => {
           >
             About Amir
           </Button>
-          {/* Nested Modals for each team member */}
+
           <TeamMemberModal
             member="matt"
             isOpen={nestedModals.matt}
@@ -103,9 +119,12 @@ const AboutUsModal = ({ trigger }) => {
           />
         </ModalBody>
         <ModalFooter>
-          <Button color="secondary" onClick={toggle}>
-            Close
-          </Button>
+          <img
+            src={closeimage}
+            alt="Close"
+            onClick={toggle}
+            style={{ cursor: "pointer", width: "30px", height: "30px" }} //
+          />
         </ModalFooter>
       </Modal>
     </div>
