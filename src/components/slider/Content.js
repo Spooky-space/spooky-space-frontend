@@ -35,7 +35,7 @@ const Content = ({ movie, onClose, genreList, slider }) => {
 						<h3 className="content-description">
 							Rating: {movie.vote_average.toFixed(1)}/10
 						</h3>
-						<div>
+						<div className="span-container">
 							<span className="content-span">{genreName[0]}</span>{" "}
 							<span className="content-span">{genreName[1]}</span>{" "}
 							<span className="content-span">{genreName[2]}</span>
