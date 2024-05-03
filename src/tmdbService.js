@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { apiConfig } from "./apiConfig.js";
+import { useState, useEffect } from "react"
+import axios from "axios"
+import { apiConfig } from "./apiConfig.js"
 
 const genreList = [
 	{ 28: "Action" },
@@ -22,16 +22,16 @@ const genreList = [
 	{ 53: "Thriller" },
 	{ 10752: "War" },
 	{ 37: "Western" },
-];
+]
 
 const useHorrorMovies = () => {
-	const [movies, setMovies] = useState([]);
-	const [isLoading, setIsLoading] = useState(false);
-	const [error, setError] = useState(null);
+	const [movies, setMovies] = useState([])
+	const [isLoading, setIsLoading] = useState(false)
+	const [error, setError] = useState(null)
 
 	useEffect(() => {
 		const fetchMovies = async () => {
-			setIsLoading(true);
+			setIsLoading(true)
 			try {
 				const response = await axios.get(`${apiConfig.baseURL}discover/movie`, {
 					params: {
@@ -39,21 +39,21 @@ const useHorrorMovies = () => {
 						with_genres: "27,53", // Genre ID for horror and thriller
 					},
 					headers: apiConfig.headers,
-				});
-				setMovies(response.data.results);
-				setError(null);
+				})
+				setMovies(response.data.results)
+				setError(null)
 			} catch (err) {
-				setError(err);
-				setMovies([]);
+				setError(err)
+				setMovies([])
 			} finally {
-				setIsLoading(false);
+				setIsLoading(false)
 			}
-		};
+		}
 
-		fetchMovies();
-	}, []);
+		fetchMovies()
+	}, [])
 
-	return { movies, isLoading, error, genreList };
-};
+	return { movies, isLoading, error, genreList }
+}
 
-export default useHorrorMovies;
+export default useHorrorMovies
