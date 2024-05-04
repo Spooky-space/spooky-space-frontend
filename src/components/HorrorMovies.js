@@ -6,7 +6,6 @@ const HorrorMovies = () => {
 	const { movies, isLoading, error, genreList } = useHorrorMovies()
 	if (isLoading) return <div>Loading...</div>
 	if (error) return <div>Error Loading Movies: {error.message}</div>
-
 	const rating = () => {
 		return movies.slice().sort((a, b) => b.vote_average - a.vote_average)
 	}

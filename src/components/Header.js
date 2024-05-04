@@ -1,36 +1,36 @@
 import React from "react"
-// import styled from "styled-components"
 import headerlogo from "../assets/header-logo.png"
 import NavButton from "./NavButton"
-import { NavLink } from "react-router-dom"
-import { Modal } from "reactstrap"
+import { NavLink, useNavigate } from "react-router-dom"
+import AboutUsModal from "./modal/AboutUsModal"
 
 const Header = ({ logOut, user }) => {
+	const navigate = useNavigate()
+
+	const handleLogOut = () => {
+		logOut()
+		navigate("/")
+	}
 	return (
 		<>
 			{user && user !== "invalid" && (
 				<div className="navbar-container">
-					<NavLink to={"/home"}>
+					<NavLink to="/">
 						<img className="header-logo" src={headerlogo} alt="Logo" />
 					</NavLink>
 					<div className="button-container">
-						<Modal />
+						<AboutUsModal className="nav-button" />
 						<NavButton
-							to="myMovieList"
-							buttonContent={"My Movies"}
+							url="/mymovielist"
+							buttonContent="My Movies"
 							className="nav-button"
 						>
 							MyMovieList
 						</NavButton>
 						<span>___</span>
-						<NavButton
-							to={logOut}
-							buttonContent={"LogOut"}
-							className="nav-button"
-							href="#contact"
-						>
+						<button onClick={handleLogOut} className="nav-button">
 							LogOut
-						</NavButton>
+						</button>
 					</div>
 				</div>
 			)}
