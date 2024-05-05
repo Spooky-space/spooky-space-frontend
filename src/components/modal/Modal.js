@@ -6,11 +6,6 @@ const Modals = ({ title, body, trigger, onAction, onCancel }) => {
 	const [modal, setModal] = useState(false)
 	const toggle = () => setModal(!modal)
 
-	// const modalClick = () => {
-	// 	onCancel()
-	// 	toggle()
-	// }
-
 	return (
 		<div>
 			<Button className="button" onClick={toggle}>

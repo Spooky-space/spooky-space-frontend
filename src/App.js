@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Routes, Route } from "react-router-dom"
 import Landing from "./pages/Landing"
 import Home from "./pages/Home.js"
@@ -19,6 +19,11 @@ const App = () => {
 	const [list, setList] = useState([])
 	const [comment, setComment] = useState(null)
 	const navigate = useNavigate()
+
+	useEffect(() => {
+		const checkForLoggedInUser = localStorage.getItem("user")
+		if (checkForLoggedInUser) setUser(JSON.parse(checkForLoggedInUser))
+	}, [])
 
 	const signIn = async (user) => {
 		try {
@@ -105,6 +110,7 @@ const App = () => {
 			alert("Opps something went wrong", error.message)
 		}
 	}
+
 	const createList = async (newList) => {
 		try {
 			const postResponse = await fetch("http://localhost:3000/list_adds", {
@@ -235,19 +241,18 @@ const App = () => {
 					/>
 				)}
 				{user && <Route path="/" element={<Home />} />}
-				{user && <Route path="/show/:id" element={<Show />} />}
+				{user && (
+					<Route
+						path="/show/:id"
+						element={<Show createList={createList} user={user} />}
+					/>
+				)}
 				{user && (
 					<Route
 						path="/mymovielist"
 						element={
 							<MyMovieList list={list} user={user} deletelist={deleteList} />
 						}
-					/>
-				)}
-				{user && (
-					<Route
-						path="/addMovie"
-						element={<AddMovie createList={createList} user={user} />}
 					/>
 				)}
 				{user && (
@@ -259,6 +264,7 @@ const App = () => {
 					/>
 				)}
 				<Route path="*" element={<NotFound />} />
+				{Location.pathname === "*" && <Footer />}
 			</Routes>
 			<Footer />
 		</>
