@@ -13,7 +13,6 @@ const Content = ({ movie, onClose, genreList, slider }) => {
 			obj[movie.genre_ids[2]]
 	)
 	const genreName = genres.map((obj) => Object.values(obj)).flat()
-	console.log("genre:", genreName[0])
 	return (
 		<div className="content">
 			<div className="content-background">
