@@ -73,8 +73,8 @@ const Show = () => {
           alt={movie.title}
           style={{
             objectFit: "cover",
-            width: "200px",
-            height: "300px",
+            width: "250px",
+            height: "350px",
             marginRight: "15px",
           }}
         />
@@ -83,7 +83,7 @@ const Show = () => {
           <h1 className="movie-title">{movie.title}</h1>
           <p className="release-date">{movie.release_date}</p>
           <p className="run-time">{movie.runtime} Minutes</p>
-          <p>{movie.vote_average.toFixed(1)} /10</p> 
+          <p className="vote-average">{movie.vote_average.toFixed(1)} /10</p> 
           <p className="movie-genre">{movie.genres[0].name}</p>
           <p className="movie-genre">{movie.genres[1].name}</p>
           <p className="movie-genre">{movie.genres[2].name}</p>
@@ -93,17 +93,22 @@ const Show = () => {
         <div className="overview-container"> 
           <p className="overview">{movie.overview}</p>
         </div>
-
+          <hr />
         <div className="comment-section">
           <Comment.Group>
-            <Header as='h3' dividing>Comments</Header>
+            <Header style={{
+              textAlign: "center",
+              fontSize: "30px",
+              color: "whitesmoke",
+            }}>Comments</Header>
 
             <Form reply>
               <Form.TextArea value={commentText} 
               onChange={(e) => setCommentText(e.target.value)}
               style={{
                 background: "rgba(10,10,10,0.7)",
-                color: "whitesmoke"
+                color: "whitesmoke",
+                height: "60px"
               }}
               />
               <Button content="Add A Comment" labelPosition="left" icon="edit" primary onClick={handleAddComments} />
