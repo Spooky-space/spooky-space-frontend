@@ -99,6 +99,7 @@
 	margin-top: -20px;
 	object-fit: cover;
 }
+
 .button-container {
 	position: absolute;
 	right: -10%;
@@ -250,6 +251,7 @@
 	font-size: 24px;
 	font-family: "Nosifer", sans-serif;
 }
+
 .modal-dialog {
 	place-content: center;
 	position: absolute;
@@ -276,6 +278,7 @@
 	gap: 10px;
 	color: #fff;
 }
+
 .modal-header-custom {
 	display: flex;
 	justify-content: space-between;
@@ -293,6 +296,7 @@
 	top: 1%;
 	transition: all 0.3s ease;
 }
+
 .close-icon:hover {
 	transform: scale(1.1);
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
@@ -312,6 +316,7 @@
 	display: flex !important;
 	justify-content: center !important;
 }
+
 .form-control {
 	border-radius: 0.25rem;
 	border: 1px solid #ced4da;
@@ -320,6 +325,7 @@
 	color: #fff;
 	text-shadow: 2px 2px 4px #ff0000;
 }
+
 .form-control:focus {
 	border-color: #dc3545;
 	box-shadow: 0 0 0 0.2rem rgba(243, 163, 163, 0.438);
@@ -329,6 +335,7 @@
 	border-color: #dc3545;
 	box-shadow: 0 0 0 0.2rem rgba(239, 3, 3, 0.438) !important;
 }
+
 input:focus {
 	outline: none;
 }
@@ -369,6 +376,7 @@ input:focus {
 	height: 10%;
 	margin-top: 5px;
 }
+
 .text-center {
 	display: flex;
 	justify-content: center;
@@ -463,20 +471,37 @@ input:focus {
 }
 
 .movie-details {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	height: 30%;
 	z-index: 3;
+	width: 100%
 }
 
 .movie-title {
 	font-weight: 900;
 	font-size: 40px;
+	text-align: center;
 }
 
 .release-date {
 	font-size: 25px;
+	text-align: center;
+}
+
+.run-time {
+	font-size: 25px;
+	text-align: center;
+}
+
+.vote-average {
+	font-size: 25px;
+	text-align: center;
+}
+
+.movie-genre {
+	display: inline-block;
+	border: 2px solid whitesmoke;
+	border-radius: 15%;
+	padding: 5px;
+	margin-left: 7px;
 }
 
 .overview-container {
@@ -492,12 +517,19 @@ input:focus {
 	z-index: 3;
 }
 
+hr {
+	z-index: 3;
+	width: 80%
+}
+
 .comment-section {
 	margin-top: 2% !important;
 	margin: auto;
 	width: 50%;
 	z-index: 3;
 }
+
 .show-poster-container {
 	height: 35%;
 }
+
