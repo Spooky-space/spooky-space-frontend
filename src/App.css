@@ -47,7 +47,7 @@
 	font-size: 25px;
 	width: 40%;
 	height: 45px;
-	padding: 10px 10px;
+	text-align: center !important;
 	overflow: hidden;
 	position: relative;
 	transition: color 0.4s;
@@ -81,6 +81,15 @@
 
 .modal-nav-button {
 	width: 100% !important;
+	margin-top: -5%;
+	margin-right: 5%;
+}
+.header-nav-button {
+	width: 30%;
+	text-align: center;
+}
+.header-logout-nav-button {
+	width: 25% !important;
 }
 
 /* FOOTER */
@@ -129,9 +138,14 @@
 
 .button-container {
 	position: absolute;
-	right: -10%;
+	/* right: -10%; */
 	top: 25%;
-	width: 30%;
+	width: 40%;
+	height: 50%;
+	display: flex;
+	justify-content: space-evenly;
+	text-align: center;
+	padding: 10px 10px;
 }
 
 /* HOME */

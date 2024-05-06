@@ -4,9 +4,9 @@ import axios from "axios"
 import { apiConfig } from "../../apiConfig"
 import { useNavigate } from "react-router-dom"
 import Trashcan from "../../assets/delete.png"
-import NotWatched from "../../assets/view.png"
+import NotWatched from "../../assets/notwatched.png"
 import StarRating from "../star-rating/StarRating"
-import Watched from "../../assets/hide.png"
+import Watched from "../../assets/watched.png"
 
 const Card = ({ movie, deleteList, getList }) => {
 	const navigate = useNavigate()
@@ -96,18 +96,22 @@ const Card = ({ movie, deleteList, getList }) => {
 						</a>
 					</div>
 					<div className="card-body">
-						<a className="card-title">
-							<p className="card-text">{movieData.title}</p>
-						</a>
+						<div className="card-title-container">
+							<a className="card-title">
+								<p className="card-text">{movieData.title}</p>
+							</a>
+						</div>
 						<div className="card-body-footer">
-							<div className="card-genres">
-								<p className="card-genre">{movieData.genres[0].name}</p>
-								<p className="card-genre"> {movieData.genres[1].name} </p>
-							</div>
-							<div className="card-actions">
+							<div className="card-footer-left">
+								<div className="card-genres">
+									<p className="card-genre">{movieData.genres[0].name} </p>{" "}
+									<p className="card-genre"> {movieData.genres[1].name}</p>
+								</div>
 								<div className="star-rating">
 									<StarRating movie={movie} getList={getList} />
 								</div>
+							</div>
+							<div className="card-actions">
 								<div className="card-action-button-container">
 									<button
 										className="card-action-button"

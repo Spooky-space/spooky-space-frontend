@@ -1,8 +1,9 @@
 import React from "react"
 import headerlogo from "../assets/header-logo.png"
 import NavButton from "./NavButton"
-import { NavLink, useNavigate } from "react-router-dom"
+import { Link, NavLink, useNavigate } from "react-router-dom"
 import AboutUsModal from "./modal/AboutUsModal"
+import { Button } from "reactstrap"
 
 const Header = ({ logOut, user }) => {
 	const navigate = useNavigate()
@@ -19,18 +20,20 @@ const Header = ({ logOut, user }) => {
 						<img className="header-logo" src={headerlogo} alt="Logo" />
 					</NavLink>
 					<div className="button-container">
-						<AboutUsModal className="nav-button modal-nav-button" />
-						<NavButton
-							url="/mymovielist"
+						<AboutUsModal />
+						<Button
+							to="/mymovielist"
 							buttonContent="My Movies"
-							className="nav-button"
+							className="header-nav-button nav-button"
 						>
 							MyMovieList
-						</NavButton>
-						<span>___</span>
-						<button onClick={handleLogOut} className="nav-button">
+						</Button>
+						<Button
+							onClick={handleLogOut}
+							className="header-logout-nav-button nav-button"
+						>
 							LogOut
-						</button>
+						</Button>
 					</div>
 				</div>
 			)}

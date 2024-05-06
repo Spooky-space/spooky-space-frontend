@@ -47,9 +47,11 @@
 	height: 50%;
 	width: 100%;
 }
+.card-title-container {
+	height: 7vh !important;
+}
 .card-title {
 	width: 100%;
-	height: 50%;
 	text-align: center;
 }
 .card-text {
@@ -67,8 +69,10 @@
 	justify-content: space-evenly;
 }
 .card-genres {
-	height: 45%;
 	text-align: center;
+	display: flex;
+	/* flex-direction: column; */
+	place-content: center;
 }
 .card-genre {
 	font-family: Metal Mania;
@@ -76,16 +80,23 @@
 	-webkit-text-stroke: 1px black;
 	font-size: 24px;
 	margin: 0;
+	padding-left: 10px;
+}
+.card-footer-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .card-actions {
 	display: flex;
-	width: 35%;
-	height: 35%;
+	width: 19%;
+	height: 19%;
 	flex-direction: column;
 }
 .card-action-button-container {
 	display: flex;
-	flex-direction: row !important;
+	flex-direction: column !important;
+	margin-top: -25%;
 }
 .card-action-button {
 	background-color: transparent;
@@ -105,14 +116,19 @@
 .star-rating {
 	padding-top: 2px;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
+	flex-direction: row;
+	width: 125px;
 }
 .star-svg {
-	width: 20px;
+	width: 25px;
 	height: 25px;
 }
-.reset-button {
-	width: 50% !important;
-	text-align: center;
+.star-button {
+	height: 60px;
+	border: none;
+	background-color: transparent;
+	justify-content: center;
+	margin-top: -9%;
+	margin-right: -10px;
+	margin-left: -10px;
 }
