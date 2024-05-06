@@ -8,7 +8,6 @@ import NotFound from "./pages/NotFound"
 import Footer from "./components/Footer.js"
 import Header from "./components/Header.js"
 import MyMovieList from "./pages/MyMovieList.js"
-import AddMovie from "./pages/AddMovie"
 import EditMovie from "./components/modal/EditList.js"
 import { useNavigate } from "react-router-dom"
 
@@ -23,6 +22,7 @@ const App = () => {
 	useEffect(() => {
 		const checkForLoggedInUser = localStorage.getItem("user")
 		if (checkForLoggedInUser) setUser(JSON.parse(checkForLoggedInUser))
+		getList()
 	}, [])
 
 	const signIn = async (user) => {
@@ -165,7 +165,6 @@ const App = () => {
 			alert("Opps something went wrong", error.message)
 		}
 	}
-
 	const getComment = async () => {
 		try {
 			const getResponse = await fetch("http://localhost:3000/forums")
@@ -251,15 +250,13 @@ const App = () => {
 					<Route
 						path="/mymovielist"
 						element={
-							<MyMovieList list={list} user={user} deletelist={deleteList} />
-						}
-					/>
-				)}
-				{user && (
-					<Route
-						path="/list-edit/:id"
-						element={
-							<EditMovie list={list} updateList={updateList} user={user} />
+							<MyMovieList
+								getList={getList}
+								list={list}
+								user={user}
+								deleteList={deleteList}
+								updateList={updateList}
+							/>
 						}
 					/>
 				)}

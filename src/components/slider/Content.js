@@ -37,7 +37,6 @@ const Content = ({ movie, onClose, genreList, slider }) => {
 						<div className="span-container">
 							<span className="content-span">{genreName[0]}</span>{" "}
 							<span className="content-span">{genreName[1]}</span>{" "}
-							<span className="content-span">{genreName[2]}</span>
 						</div>
 						<div className="content-button">
 							<NavButton

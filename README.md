@@ -31,9 +31,9 @@ Netflix slider resource: (https://levelup.gitconnected.com/how-to-implement-netf
 
 Comment section resource(https://react.semantic-ui.com/views/comment/#types-comment)
 
-### Search Bar
+### Star Rating
 
-Search bar resource (https://medium.com/@pradityadhitama/simple-search-bar-component-functionality-in-react-6589fda3385d)
+Star Rating resource (https://www.npmjs.com/package/react-simple-star-rating)
 
 ### External API TMDB
 
