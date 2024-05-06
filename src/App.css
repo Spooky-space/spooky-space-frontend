@@ -488,29 +488,29 @@ input:focus {
 
 .release-date {
   font-size: 25px;
-	z-index: 3;
-	width: 100%
+  z-index: 3;
+  width: 100%;
 }
 
 .movie-title {
-	font-weight: 900;
-	font-size: 40px;
-	text-align: center;
+  font-weight: 900;
+  font-size: 40px;
+  text-align: center;
 }
 
 .release-date {
-	font-size: 25px;
-	text-align: center;
+  font-size: 25px;
+  text-align: center;
 }
 
 .run-time {
-	font-size: 25px;
-	text-align: center;
+  font-size: 25px;
+  text-align: center;
 }
 
 .vote-average {
-	font-size: 25px;
-	text-align: center;
+  font-size: 25px;
+  text-align: center;
 }
 
 .movie-genre {
@@ -549,4 +549,3 @@ hr {
 .show-poster-container {
 	height: 35%;
 }
-
