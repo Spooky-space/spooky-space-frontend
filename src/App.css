@@ -50,6 +50,12 @@
 	padding: 10px, 10px;
 }
 
+.nav-button:active {
+	background-color: transparent;
+	box-shadow: 0 2px #666;
+	transform: translateY(2px);
+}
+
 /* FOOTER */
 
 .footer-bar {
@@ -375,6 +381,17 @@ input:focus {
 	display: flex;
 	justify-content: center;
 }
+.hidden-option {
+	visibility: hidden;
+	height: 0;
+}
+.form-size-show {
+	height: 10%;
+}
+.add-movie-button {
+	width: 93%;
+	margin-top: 4px;
+}
 
 /* NOT FOUND */
 .not-found-background {
@@ -389,12 +406,13 @@ input:focus {
 
 .not-found-text-container {
 	align-content: flex-end;
-	margin-bottom: 100px;
+	margin-bottom: 35%;
 }
 
 .not-found-text {
-	font-family: Creepster;
-	color: white;
+	font-family: Nosifer;
+	color: whitesmoke;
+	opacity: 65%;
 }
 
 /* SHOW */
@@ -510,3 +528,8 @@ hr {
 	width: 50%;
 	z-index: 3;
 }
+
+.show-poster-container {
+	height: 35%;
+}
+

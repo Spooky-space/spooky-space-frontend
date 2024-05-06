@@ -89,7 +89,6 @@
 	margin-top: 10%;
 }
 .content-span {
-	border: 1px solid whitesmoke !important;
 	border-radius: 5px;
 	display: block;
 	font-weight: 500;
@@ -98,6 +97,6 @@
 	text-align: center;
 }
 .span-container {
-	/* padding-top: 10px; */
-	/* padding-bottom: 10px; */
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
