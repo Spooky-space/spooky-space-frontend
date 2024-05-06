@@ -19,7 +19,7 @@ const Header = ({ logOut, user }) => {
 						<img className="header-logo" src={headerlogo} alt="Logo" />
 					</NavLink>
 					<div className="button-container">
-						<AboutUsModal className="nav-button" />
+						<AboutUsModal className="nav-button modal-nav-button" />
 						<NavButton
 							url="/mymovielist"
 							buttonContent="My Movies"
