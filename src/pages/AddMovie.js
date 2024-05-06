@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form"
 import { Col, Form, FormGroup, Label, Row } from "reactstrap"
 import { useNavigate } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 const AddMovie = ({ movie, createList, user }) => {
 	const navigate = useNavigate()
@@ -86,7 +87,7 @@ const AddMovie = ({ movie, createList, user }) => {
 						onClick={handleSubmit}
 						className="nav-button add-movie-button"
 					>
-						Add to My Movies
+						<NavLink to="/mymovielist">Add to My Movies</NavLink>
 					</button>
 				</div>
 			</Form>
