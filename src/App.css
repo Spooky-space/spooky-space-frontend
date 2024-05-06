@@ -381,13 +381,16 @@ input:focus {
   display: flex;
   justify-content: center;
 }
+
 .hidden-option {
   visibility: hidden;
   height: 0;
 }
+
 .form-size-show {
   height: 10%;
 }
+
 .add-movie-button {
   width: 93%;
   margin-top: 4px;
@@ -511,11 +514,11 @@ input:focus {
 }
 
 .movie-genre {
-  display: inline-block;
-  border: 2px solid whitesmoke;
-  border-radius: 15%;
-  padding: 5px;
-  margin-left: 7px;
+	display: inline-block;
+	border: 2px solid whitesmoke;
+	border-radius: 15%;
+	padding: 5px;
+	margin: 20px;
 }
 
 .overview-container {
@@ -532,8 +535,8 @@ input:focus {
 }
 
 hr {
-  z-index: 3;
-  width: 80%;
+	z-index: 3;
+	width: 100%
 }
 
 .comment-section {
@@ -544,5 +547,5 @@ hr {
 }
 
 .show-poster-container {
-  height: 35%;
+	height: 35%;
 }
