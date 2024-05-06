@@ -193,6 +193,17 @@
 .landing-logo {
 	object-fit: cover;
 }
+.audio-control-button {
+  padding: 2px; /*Reduced padding to fit the image better*/
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.play-pause-icon {
+  width: 25px; /*Set a specific size for the icons*/
+  height: auto; /*Maintain aspect ratio*/
+}
 
 /* BUTTONS */
 .landing-button-container {

@@ -1,25 +1,36 @@
-import React, { useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Image from "../assets/red-tree2.png"
 import Logo from "../assets/logo-screenshot-removebg.png"
 import Modals from "../components/modal/Modal"
 import LoginForm from "../components/modal/LoginForm"
 import SignUpForm from "../components/modal/SignUpForm"
 import AboutUsModal from "../components/modal/AboutUsModal"
-import HalloweenRain from "../assets/HalloweenRain.mp3" // Make sure the path is correct
+import HalloweenRain from "../assets/HalloweenRain.mp3"
+import playImage from "../assets/play.png"
+import pauseImage from "../assets/stop.png"
+
 
 const Landing = ({ signIn, signUp }) => {
   const handleAction = () => {}
   const handleCancel = () => {}
+  const [isPlaying, setIsPlaying] = useState(false)
+
   const audioRef = useRef(null)
 
   useEffect(() => {
     if (audioRef.current) {
-      const audio = audioRef.current
-      audio.loop = true
-      audioRef.current.volume = 0.2 // Set volume to 30%
-      audioRef.current.play()
+      if (isPlaying) {
+        audioRef.current.play()
+      } else {
+        audioRef.current.pause()
+      }
     }
-  }, [])
+  }, [isPlaying])
+
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying)
+  }
+
 
   return (
     <div className="page-body landing-background">
@@ -36,6 +47,13 @@ const Landing = ({ signIn, signUp }) => {
           <img src={Logo} alt="Spooky Space" className="landing-logo" />
         </div>
         <div className="landing-button-container">
+          <button onClick={togglePlay} className="audio-control-button">
+            <img
+              src={isPlaying ? pauseImage : playImage}
+              alt={isPlaying ? "Pause Music" : "Play Music"}
+              className="play-pause-icon"
+            />
+          </button>
           <Modals
             title="Create Account"
             body={<SignUpForm signUp={signUp} />}

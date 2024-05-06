@@ -191,7 +191,7 @@ const Show = ({ createList, user }) => {
           </Comment.Group>
         </div>
     </div>
-  )
-}
+  ) 
+ }
 
 export default Show
