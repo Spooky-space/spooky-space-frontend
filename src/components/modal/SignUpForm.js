@@ -32,7 +32,6 @@ const SignUpForm = ({ signUp }) => {
         <FormGroup>
           <br></br>
           <br></br>
-          <br></br>
           <Label for="username">Username </Label>
           <input
             id="username"
