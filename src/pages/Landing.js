@@ -9,10 +9,12 @@ import HalloweenRain from "../assets/HalloweenRain.mp3"
 import playImage from "../assets/play.png"
 import pauseImage from "../assets/stop.png"
 
+
 const Landing = ({ signIn, signUp }) => {
   const handleAction = () => {}
   const handleCancel = () => {}
   const [isPlaying, setIsPlaying] = useState(false)
+
   const audioRef = useRef(null)
 
   useEffect(() => {
@@ -28,6 +30,7 @@ const Landing = ({ signIn, signUp }) => {
   const togglePlay = () => {
     setIsPlaying(!isPlaying)
   }
+
 
   return (
     <div className="page-body landing-background">
