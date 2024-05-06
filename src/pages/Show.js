@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { useParams, NavLink } from "react-router-dom"
 import axios from "axios"
 import { apiConfig } from "../apiConfig"
 import { Comment, Form, Button, Header } from "semantic-ui-react"
 import spookyUser from "../assets/spooky.png"
 import useHorrorMovies from "../tmdbService"
+import backBtn from "../assets/back-btn.png"
 import AddMovie from "./AddMovie"
 
 const Show = ({ createList, user }) => {
 	const imageUrlBase = "https://image.tmdb.org/t/p/original"
 	const smallImageUrlBase = "https://image.tmdb.org/t/p/w500"
-
+  
 	const { genreList } = useHorrorMovies()
   const { id } = useParams()
   const [movie, setMovie] = useState(null)
@@ -62,12 +63,18 @@ const Show = ({ createList, user }) => {
     <div className="show-body">
       <div className="show-background">
       <div className="show-background-shadow" />
-      <div className="show-background-image" style={{
+      <div className="show-background-image" 
+        style={{
         backgroundImage: `url(${imageUrlBase + movie.backdrop_path})`,
-      }} />
+        }} 
+      />
       </div>
 
+
       <div className="movie-info">
+          <NavLink to={"/"} >
+            <img src={backBtn} className="img-back"/>
+          </NavLink>
 			<div className="show-poster-container">
 					<img
 						src={smallImageUrlBase + movie.poster_path}
@@ -78,7 +85,7 @@ const Show = ({ createList, user }) => {
 							height: "350px",
 							marginRight: "15px",
 						}}
-					/>
+            />
 					<AddMovie createList={createList} user={user} movie={movie} />
 				</div>
 
@@ -90,7 +97,6 @@ const Show = ({ createList, user }) => {
           <div className="genre-container">
             <p className="movie-genre">{movie.genres[0].name}</p>
             <p className="movie-genre">{movie.genres[1].name}</p>
-            <p className="movie-genre">{movie.genres[2].name}</p>
           </div>
         </div>
       </div>
@@ -159,12 +165,13 @@ const Show = ({ createList, user }) => {
                       /> 
                       <h2 
                         style={{
-                          fontFamily: "Metal Mania", marginBottom: "5px", 
+                          fontFamily: "Metal Mania", 
+                          marginBottom: "5px", 
                           padding: "0 5px"
-                          }}
+                        }}
                       >
-                        {"Seth"}
-                        </h2>{" "}
+                        {user.username}
+                      </h2>{" "}
                         <p 
                           style={{
                             fontFamily: "Cinzel",
@@ -192,6 +199,6 @@ const Show = ({ createList, user }) => {
         </div>
     </div>
   ) 
- }
+}
 
 export default Show
