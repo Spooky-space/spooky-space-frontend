@@ -11,7 +11,7 @@ import MovieGrid from "../components/moviegrid/MovieGrid"
 
 const MyMovieList = ({ list, user, deleteList, updateList, getList }) => {
 	return (
-		<div className="page-body">
+		<div className="my-movie-page-body">
 			<div className="content-wrapper">
 				<div className="my-lists-header">
 					<div className="header-container">
