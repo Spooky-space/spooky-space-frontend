@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form"
-import { Col, Form, FormGroup, Label, Row, Input } from "reactstrap"
+import { Col, Form, FormGroup, Label, Row } from "reactstrap"
 import { useNavigate, useParams } from "react-router-dom"
 
 const EditList = ({ updateList, user, movie }) => {
@@ -10,13 +10,12 @@ const EditList = ({ updateList, user, movie }) => {
 		handleSubmit,
 		formState: { errors },
 	} = useForm()
-
 	const onSubmit = (editList) => {
 		editList.user_id = user.id
 		updateList(editList)
 		navigate("/myMovieList")
 	}
-
+	console.log(movie)
 	return (
 		<div className="form-size-show">
 			<Form onSubmit={handleSubmit(onSubmit)} className="form-size">
@@ -52,7 +51,7 @@ const EditList = ({ updateList, user, movie }) => {
 							<input
 								id="watched"
 								name="watched"
-								type="radio"
+								type="toggle"
 								className="form-control"
 								{...register("watched")}
 							/>{" "}
