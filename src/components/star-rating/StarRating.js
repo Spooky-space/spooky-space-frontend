@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Rating } from "react-simple-star-rating"
+import Star from "../../assets/star.png"
 
 const StarRating = ({ movie, getList }) => {
 	const [rating, setRating] = useState(0)
@@ -29,8 +30,15 @@ const StarRating = ({ movie, getList }) => {
 			alert("Opps something went wrong", error.message)
 		}
 	}
+	const handleReset = () => {
+		setRating(0)
+		updateList({ rating: 0 }, movie.id)
+	}
 	return (
 		<div className="star-rating">
+			<button onClick={handleReset} className="star-button">
+				<img className="star-button" src={Star} />
+			</button>
 			<Rating
 				className="star-rating"
 				onClick={handleRating}

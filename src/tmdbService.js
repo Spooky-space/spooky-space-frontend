@@ -17,7 +17,7 @@ const genreList = [
 	{ 10402: "Music" },
 	{ 9648: "Mystery" },
 	{ 10749: "Romance" },
-	{ 878: "Science_Fiction" },
+	{ 878: "Sci_Fi" },
 	{ 10770: "TV_Movie" },
 	{ 53: "Thriller" },
 	{ 10752: "War" },
