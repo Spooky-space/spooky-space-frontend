@@ -56,21 +56,17 @@ const Landing = ({ signIn, signUp }) => {
             body={<SignUpForm signUp={signUp} />}
             onAction={handleAction}
             onCancel={handleCancel}
-            trigger={
-              <button className="create-account-button button">
-                Create Account
-              </button>
-            }
+            trigger={<button className="nav-button">Create Account</button>}
           />
           <Modals
             title="Log In"
             body={<LoginForm signIn={signIn} />}
             onAction={handleAction}
             onCancel={handleCancel}
-            trigger={<button className="login-button button">Log In</button>}
+            trigger={<button className="nav-button">Log In</button>}
           />
           <AboutUsModal
-            trigger={<button className="about-button button">About Us</button>}
+            trigger={<button className="nav-button">About Us</button>}
           />
         </div>
       </div>
