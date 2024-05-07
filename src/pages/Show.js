@@ -2,23 +2,16 @@ import React, { useEffect, useState } from "react"
 import { useParams, NavLink } from "react-router-dom"
 import axios from "axios"
 import { apiConfig } from "../apiConfig"
-import { Comment, Form, Header } from "semantic-ui-react"
-import { Button } from "reactstrap"
-import spookyUser from "../assets/spooky.png"
-import useHorrorMovies from "../tmdbService"
 import backBtn from "../assets/back-btn.png"
 import AddMovie from "./AddMovie"
+import Comment from "../components/comment/Comment"
 
-const Show = ({ createList, user }) => {
+const Show = ({ user, createList }) => {
 	const imageUrlBase = "https://image.tmdb.org/t/p/original"
 	const smallImageUrlBase = "https://image.tmdb.org/t/p/w500"
-
-	const { genreList } = useHorrorMovies()
 	const { id } = useParams()
 	const [movie, setMovie] = useState(null)
 	const [isLoading, setIsLoading] = useState(true)
-	const [comments, setComments] = useState([])
-	const [commentText, setCommentText] = useState("")
 
 	useEffect(() => {
 		fetchMovie()
@@ -37,21 +30,9 @@ const Show = ({ createList, user }) => {
 		}
 	}
 
-	const handleAddComments = () => {
-		const newComment = {
-			id: comments.length + 1,
-			text: commentText,
-			date: new Date(),
-		}
-		setComments([...comments, newComment])
-		setCommentText("")
-	}
+	if (isLoading) return <div>Loading...</div>
 
-	if (isLoading) return
-	;<div>Loading...</div>
-
-	if (!movie) return
-	;<div>No movie found.</div>
+	if (!movie) return <div>No movie found.</div>
 
 	return (
 		<div className="show-body">
@@ -101,118 +82,7 @@ const Show = ({ createList, user }) => {
 			</div>
 			<hr />
 			<div className="comment-section">
-				<Comment.Group>
-					<Header
-						style={{
-							textAlign: "center",
-							fontSize: "50px",
-							color: "whitesmoke",
-							fontFamily: "Metal Mania",
-							webkitTextStroke: "1px black",
-						}}
-					>
-						Comments
-					</Header>
-
-					<Form reply>
-						<Form.TextArea
-							value={commentText}
-							onChange={(e) => setCommentText(e.target.value)}
-							style={{
-								background: "rgba(10,10,10,0.7)",
-								color: "whitesmoke",
-								height: "60px",
-							}}
-						/>
-						{/* <Button
-							className="nav-Button"
-							content="Add A Comment"
-							labelPosition="left"
-							icon="edit"
-						/> */}
-						<Button
-							className=" nav-button header-nav-button comment-nav-button "
-							onClick={handleAddComments}
-							labelPosition="left"
-							icon="edit"
-						>
-							{" "}
-							<NavLink className="my-movie-link">Add a Comment</NavLink>
-						</Button>
-					</Form>
-					<br />
-
-					{comments.map((comment) => (
-						<Comment
-							key={comment.id}
-							style={{
-								width: "100%",
-								border: "2px solid whitesmoke",
-								borderRadius: "10px",
-								padding: "0",
-							}}
-						>
-							<div
-								style={{
-									height: "5vh !important",
-								}}
-							>
-								<Comment.Metadata
-									style={{
-										color: "whitesmoke",
-										width: "100%",
-										fontFamily: "cinzel",
-									}}
-								>
-									<div
-										style={{
-											display: "flex",
-											alignItems: "flex-end",
-											width: "100% !important",
-											height: "10% !important",
-										}}
-									>
-										<img
-											src={spookyUser}
-											style={{
-												objectFit: "scale-down",
-												height: "50px",
-												borderRadius: "50%",
-											}}
-										/>
-										<h2
-											style={{
-												fontFamily: "Metal Mania",
-												marginBottom: "5px",
-												padding: "0 5px",
-											}}
-										>
-											{user.username}
-										</h2>{" "}
-										<p
-											style={{
-												fontFamily: "Cinzel",
-												marginBottom: "10px",
-											}}
-										>
-											{comment.date.toLocaleString()}
-										</p>
-									</div>
-								</Comment.Metadata>
-								<Comment.Text
-									style={{
-										margin: ".5em",
-										color: "whitesmoke",
-										fontFamily: "Cinzel",
-										fontSize: "20px",
-									}}
-								>
-									{comment.text}
-								</Comment.Text>
-							</div>
-						</Comment>
-					))}
-				</Comment.Group>
+				<Comment user={user} movie={movie} />
 			</div>
 		</div>
 	)
