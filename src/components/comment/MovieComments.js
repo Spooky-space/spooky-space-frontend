@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { NavLink, useParams } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import Freddy from "../../assets/spooky-user/freddy.webp"
 import Ghost from "../../assets/spooky-user/ghost.webp"
 import Ghost2 from "../../assets/spooky-user/ghost2.webp"
@@ -24,7 +24,6 @@ import {
 	Form,
 	Header,
 } from "semantic-ui-react"
-import { isEditable } from "@testing-library/user-event/dist/utils"
 
 const CommentSection = ({ user, movie }) => {
 	const [comments, setComments] = useState([])
