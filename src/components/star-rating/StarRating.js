@@ -12,7 +12,7 @@ const StarRating = ({ movie, getList }) => {
 	const updateList = async (rating, id) => {
 		try {
 			const patchResponse = await fetch(
-				`http://localhost:3000/list_adds/${id}`,
+				`https://spooky-space-backend.onrender.com/list_adds/${id}`,
 				{
 					method: "PATCH",
 					headers: {
