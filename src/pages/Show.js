@@ -4,7 +4,7 @@ import axios from "axios"
 import { apiConfig } from "../apiConfig"
 import backBtn from "../assets/back-btn.png"
 import AddMovie from "./AddMovie"
-import Comment from "../components/comment/Comment"
+import Comment from "../components/comment/MovieComments"
 
 const Show = ({ user, createList }) => {
 	const imageUrlBase = "https://image.tmdb.org/t/p/original"
