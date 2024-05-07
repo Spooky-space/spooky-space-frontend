@@ -91,10 +91,6 @@
 .header-logout-nav-button {
 	width: 20% !important;
 }
-.comment-nav-button {
-	text-align: center;
-	margin-left: 35%;
-}
 
 /* FOOTER */
 
@@ -466,7 +462,8 @@ input:focus {
 
 /* SHOW */
 .show-body {
-	height: 200vh;
+	height: 150vh;
+	width: 100%;
 	background-color: #212020;
 	color: whitesmoke;
 	display: flex;
@@ -523,6 +520,7 @@ input:focus {
 	margin-left: 15%;
 	margin-top: 15%;
 	z-index: 3;
+	height: 45%;
 }
 
 .movie-details {

@@ -1,0 +1,108 @@
+.comment-section-wrapper {
+	position: absolute;
+	left: 10%;
+	bottom: 100;
+	height: 75%;
+	display: flex;
+	justify-content: center;
+	width: 80%;
+}
+.comment-section-body {
+	width: 80%;
+}
+.comment-header-form-wrapper {
+	position: sticky;
+	display: flex;
+	top: 0;
+	flex-direction: column;
+	justify-content: center;
+	height: 30%;
+}
+.comment-header-wrapper {
+	text-align: center;
+	padding-bottom: 3%;
+}
+.comment-form-wrapper {
+	width: 60%;
+	position: relative !important;
+	left: 20% !important;
+	height: 50% !important;
+}
+.add-comment-button-wrapper {
+	display: flex;
+	justify-content: center;
+}
+.comment-nav-button {
+	border: 2px solid rgba(245, 245, 245, 0.5) !important;
+	border-radius: 6px;
+	background: transparent;
+	font-family: "Metal Mania", cursive;
+	color: whitesmoke;
+	-webkit-text-stroke: 1px black;
+	font-size: 25px;
+	width: 40%;
+	height: 45px;
+	text-align: center !important;
+	overflow: hidden;
+	position: relative;
+	transition: color 0.4s;
+}
+
+.comment-nav-button::before {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: linear-gradient(to top, red, transparent);
+	transition: top 0.4s ease;
+	z-index: -1;
+}
+
+.comment-nav-button:hover::before {
+	top: 0;
+}
+
+.comment-nav-button:hover {
+	color: whitesmoke;
+}
+
+.comment-nav-button:active {
+	background-color: transparent;
+	box-shadow: 0 2px #666;
+	transform: translateY(2px);
+}
+.comment-nav-link {
+	color: whitesmoke;
+	-webkit-text-stroke: 1px black;
+	text-decoration: none;
+}
+.comments-wrapper {
+	position: relative;
+	left: 21%;
+	overflow: scroll;
+	height: 90%;
+	width: 75%;
+}
+.comment-wrapper {
+	padding-bottom: 10px;
+}
+.comment-icon-wrapper {
+	position: relative;
+	right: 0;
+	height: 100%;
+	width: 100%;
+}
+.comment-icon-button {
+	background-color: transparent;
+	border: none;
+	width: 5%;
+}
+.comment-delete-icon {
+	width: 100%;
+}
+.comment-edit-icon {
+	width: 80%;
+	padding-bottom: 2px;
+}
