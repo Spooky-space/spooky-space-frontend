@@ -87,7 +87,9 @@ const AddMovie = ({ movie, createList, user }) => {
 						onClick={handleSubmit}
 						className="nav-button add-movie-button"
 					>
-						<NavLink className="my-movie-link">Add to My Movies</NavLink>
+						<NavLink onClick={handleSubmit} className="my-movie-link">
+							Add to My Movies
+						</NavLink>
 					</button>
 				</div>
 			</Form>
