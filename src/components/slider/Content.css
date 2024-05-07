@@ -82,7 +82,8 @@
 }
 .content-close-x {
 	font-family: inherit !important;
-	font-size: 40px;
+	font-size: 50px;
+	-webkit-text-stroke: 1px black;
 }
 .content-button {
 	width: auto;

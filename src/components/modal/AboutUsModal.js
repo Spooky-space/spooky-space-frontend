@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
 import closeimage from "../modal/closeimage.png"
 import { NavLink } from "react-router-dom"
+import "./AboutUsModal.css"
 
 const AboutUsModal = ({ trigger, title }) => {
 	const [modal, setModal] = useState(false)
