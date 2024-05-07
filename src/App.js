@@ -27,14 +27,17 @@ const App = () => {
 
 	const signIn = async (user) => {
 		try {
-			const signInResponse = await fetch("http://localhost:3000/login", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
-				},
-				body: JSON.stringify(user),
-			})
+			const signInResponse = await fetch(
+				"https://spooky-space-backend.onrender.com/login",
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+						Accept: "application/json",
+					},
+					body: JSON.stringify(user),
+				}
+			)
 			if (!signInResponse) {
 				throw new Error(signInResponse.errors)
 			}
@@ -57,14 +60,17 @@ const App = () => {
 	const signUp = async (user) => {
 		console.log(user)
 		try {
-			const signUpResponse = await fetch("http://localhost:3000/signup", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-					Accept: "application/json",
-				},
-				body: JSON.stringify(user),
-			})
+			const signUpResponse = await fetch(
+				"https://spooky-space-backend.onrender.com/signup",
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+						Accept: "application/json",
+					},
+					body: JSON.stringify(user),
+				}
+			)
 			if (!signUpResponse) {
 				throw new Error(signUpResponse.errors)
 			}
@@ -79,13 +85,16 @@ const App = () => {
 
 	const logOut = async () => {
 		try {
-			const signOutResponse = await fetch("http://localhost:3000/logout", {
-				method: "DELETE",
-				headers: {
-					"Content-Type": "application/json",
-					Authorization: localStorage.getItem("token"),
-				},
-			})
+			const signOutResponse = await fetch(
+				"https://spooky-space-backend.onrender.com/logout",
+				{
+					method: "DELETE",
+					headers: {
+						"Content-Type": "application/json",
+						Authorization: localStorage.getItem("token"),
+					},
+				}
+			)
 			if (!signOutResponse) {
 				throw new Error(signOutResponse.errors)
 			}
@@ -100,7 +109,9 @@ const App = () => {
 
 	const getList = async () => {
 		try {
-			const getResponse = await fetch("http://localhost:3000/list_adds")
+			const getResponse = await fetch(
+				"https://spooky-space-backend.onrender.com/list_adds"
+			)
 			if (!getResponse.ok) {
 				throw new Error("Error on the get request for movie list")
 			}
@@ -113,13 +124,16 @@ const App = () => {
 
 	const createList = async (newList) => {
 		try {
-			const postResponse = await fetch("http://localhost:3000/list_adds", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(newList),
-			})
+			const postResponse = await fetch(
+				"https://spooky-space-backend.onrender.com/list_adds",
+				{
+					method: "POST",
+					headers: {
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify(newList),
+				}
+			)
 			if (!postResponse.ok) {
 				throw new Error("Error on the post request for movie list")
 			}
@@ -134,7 +148,7 @@ const App = () => {
 		console.log("id:", id)
 		try {
 			const patchResponse = await fetch(
-				`http://localhost:3000/list_adds/${id}`,
+				`https://spooky-space-backend.onrender.com/list_adds/${id}`,
 				{
 					method: "PATCH",
 					headers: {
@@ -154,9 +168,12 @@ const App = () => {
 	}
 	const deleteList = async (id) => {
 		try {
-			const response = await fetch(`http://localhost:3000/list_adds/${id}`, {
-				method: "DELETE",
-			})
+			const response = await fetch(
+				`https://spooky-space-backend.onrender.com/list_adds/${id}`,
+				{
+					method: "DELETE",
+				}
+			)
 			if (!response.ok) {
 				throw new Error("Error on the delete request")
 			}
