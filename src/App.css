@@ -91,6 +91,10 @@
 .header-logout-nav-button {
 	width: 20% !important;
 }
+.comment-nav-button {
+	text-align: center;
+	margin-left: 35%;
+}
 
 /* FOOTER */
 
@@ -530,37 +534,43 @@ input:focus {
 }
 
 .movie-title {
-	font-weight: 900;
-	font-size: 40px;
-}
-
-.release-date {
-	font-size: 25px;
-	z-index: 3;
-	width: 100%;
-}
-
-.movie-title {
-	font-weight: 900;
-	font-size: 50px;
+	font-size: 60px;
 	text-align: center;
 	padding-bottom: 10px;
+	font-family: Metal Mania;
+	-webkit-text-stroke: 2px black;
+}
+.tagline {
+	font-size: 28px;
+	text-align: center;
+	padding-top: 50px;
+	font-family: cinzel;
+	color: whitesmoke;
+	font-weight: 600;
 }
 
 .release-date {
 	font-size: 28px;
 	text-align: center;
-	padding-top: 50px;
+	font-family: cinzel;
+	font-weight: 600;
+	color: whitesmoke;
 }
 
 .run-time {
 	font-size: 28px;
 	text-align: center;
+	font-family: cinzel;
+	font-weight: 600;
+	color: whitesmoke;
 }
 
 .vote-average {
 	font-size: 28px;
 	text-align: center;
+	font-family: cinzel;
+	font-weight: 600;
+	color: whitesmoke;
 }
 
 .genre-container {
@@ -573,6 +583,9 @@ input:focus {
 	padding: 6px;
 	margin: auto;
 	font-size: 20px;
+	font-family: cinzel;
+	font-weight: 700;
+	color: whitesmoke;
 }
 
 .overview-container {
@@ -580,12 +593,16 @@ input:focus {
 	display: flex;
 	justify-content: center;
 	margin-top: 40%;
+	color: whitesmoke;
 }
 
 .overview {
 	max-width: 50%;
 	text-align: center;
 	z-index: 3;
+	font-family: cinzel;
+	font-weight: 800;
+	font-size: 20px;
 }
 
 hr {
@@ -598,6 +615,7 @@ hr {
 	margin: auto;
 	width: 50%;
 	z-index: 3;
+	margin-left: 35%;
 }
 
 .show-poster-container {
