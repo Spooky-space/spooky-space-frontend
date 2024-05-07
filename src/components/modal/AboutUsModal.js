@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
 import closeimage from "../modal/closeimage.png"
+import { NavLink } from "react-router-dom"
 
 const AboutUsModal = ({ trigger, title }) => {
 	const [modal, setModal] = useState(false)
@@ -63,7 +64,8 @@ const AboutUsModal = ({ trigger, title }) => {
 					className="modal-nav-button nav-button header-nav-button"
 					onClick={toggle}
 				>
-					About Us
+					{" "}
+					<NavLink className="my-movie-link">About Us</NavLink>
 				</Button>
 			</div>
 			<Modal isOpen={modal} toggle={toggle}>

@@ -149,6 +149,7 @@
 .my-movie-link {
 	color: whitesmoke;
 	-webkit-text-stroke: 1px black;
+	text-decoration: none;
 }
 
 /* HOME */
