@@ -26,10 +26,10 @@ const Header = ({ logOut, user }) => {
 							className="header-nav-button nav-button"
 							buttonContent="My Movies"
 						/>
+
 						<Button
 							onClick={handleLogOut}
-							className="header-logout-nav-button nav-button"
-						>
+							className="header-logout-nav-button nav-button">
 							Log Out
 						</Button>
 					</div>
