@@ -3,12 +3,12 @@ import IconArrowDown from "./IconArrowDown"
 import "./ShowDetailsButton.css"
 import { Link } from "react-scroll"
 // simple button that controls what happens when you click on the slide and what appears when you hover over it
-const ShowDetailsButton = ({ onClick }) => {
+const ShowDetailsButton = ({ onClick, slider }) => {
 	return (
 		<Link
 			onClick={onClick}
 			className="show-details-button"
-			to="content"
+			to={slider}
 			smooth={true}
 			duration={500}
 		>

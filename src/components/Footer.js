@@ -3,7 +3,7 @@ import footerphoto from "../assets/footer-photo.png"
 
 const Footer = () => {
 	return (
-		<div className="footer-bar">
+		<div name="footer" className="footer-bar">
 			<h4 className="footer-text">
 				{" "}
 				&copy; Mark | Amir | Seth | Matt | Learn Academy Alpha 2024
