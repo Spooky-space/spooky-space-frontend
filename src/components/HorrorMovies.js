@@ -78,7 +78,7 @@ const HorrorMovies = () => {
 					</Slider>
 				)}
 			</div>
-			<br name="most-popular-anchor" />
+			<br name="a-to-z-anchor" />
 		</div>
 	)
 }
