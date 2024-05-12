@@ -22,17 +22,15 @@ const Header = ({ logOut, user }) => {
 					<div className="button-container">
 						<AboutUsModal />
 						<NavButton
-							buttonContent="My Movies"
-							to="mymovielist"
+							to="/mymovielist"
 							className="header-nav-button nav-button"
-						>
-							MyMovieList
-						</NavButton>
+							buttonContent="My Movies"
+						/>
+
 						<Button
 							onClick={handleLogOut}
-							className="header-logout-nav-button nav-button"
-						>
-							<NavLink className="my-movie-link">Log Out</NavLink>
+							className="header-logout-nav-button nav-button">
+							Log Out
 						</Button>
 					</div>
 				</div>
