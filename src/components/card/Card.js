@@ -119,7 +119,7 @@ const Card = ({ movie, deleteList, getList }) => {
 										onClick={handleWatched}
 									>
 										<img
-											src={isWatched && movie.watched ? Watched : NotWatched}
+											src={watchedIcon}
 											alt={
 												movie.watched ? "Watched Eye icon" : "NotWatched icon"
 											}
