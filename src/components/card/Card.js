@@ -15,6 +15,7 @@ const Card = ({ movie, deleteList, getList }) => {
 	const [movieData, setMovieData] = useState(null)
 	const [isLoading, setIsLoading] = useState(true)
 	const [isWatched, setIsWatched] = useState(false)
+	const [watchedIcon, setWatchedIcon] = useState(isWatched)
 	const { tmdb_api_id } = movie
 	const id = tmdb_api_id
 
@@ -32,6 +33,7 @@ const Card = ({ movie, deleteList, getList }) => {
 		} catch (error) {
 		} finally {
 			setIsLoading(false)
+			setWatchedIcon()
 		}
 	}
 	if (isLoading) {
