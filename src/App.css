@@ -141,11 +141,6 @@
 	justify-content: space-evenly;
 	text-align: center;
 }
-.my-movie-link {
-	color: whitesmoke;
-	-webkit-text-stroke: 1px black;
-	text-decoration: none;
-}
 
 /* HOME */
 .home-content {
@@ -429,6 +424,7 @@ input:focus {
 }
 
 .add-movie-button {
+	text-align: center !important;
 	width: 93%;
 	margin-top: 4px;
 }
