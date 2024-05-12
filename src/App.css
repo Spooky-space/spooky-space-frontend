@@ -52,6 +52,7 @@
 	transition: color 0.4s;
 	display: flex !important;
 	align-items: center !important;
+	padding: 2px 2px !important;
 }
 
 .nav-button::before {
