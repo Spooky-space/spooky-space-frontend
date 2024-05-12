@@ -84,6 +84,8 @@
 	margin-right: 5%;
 }
 .header-nav-button {
+	display: flex;
+	place-content: center;
 	text-align: center;
 }
 
