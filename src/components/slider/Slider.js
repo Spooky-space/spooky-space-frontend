@@ -59,7 +59,6 @@ const Slider = ({ children, genreList, slider }) => {
 					slider={slider}
 				/>
 			)}
-			<br name="scroll anchor" />
 		</SliderContext.Provider>
 	)
 }

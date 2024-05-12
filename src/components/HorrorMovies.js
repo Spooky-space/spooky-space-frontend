@@ -34,7 +34,7 @@ const HorrorMovies = () => {
 							<Slider.Item
 								movie={movie}
 								key={movie.id}
-								slider={"most-popular-anchor"}
+								slider={"most-popular"}
 							></Slider.Item>
 						))}
 					</Slider>
@@ -55,7 +55,7 @@ const HorrorMovies = () => {
 							<Slider.Item
 								movie={movie}
 								key={movie.id}
-								slider={"a-to-z"}
+								slider={"highest-rated"}
 							></Slider.Item>
 						))}
 					</Slider>
@@ -72,12 +72,11 @@ const HorrorMovies = () => {
 							<Slider.Item
 								movie={movie}
 								key={movie.id}
-								slider={"a-to-z-anchor"}
+								slider={"a-to-z"}
 							></Slider.Item>
 						))}
 					</Slider>
 				)}
-				<br name="a-to-z-anchor" />
 			</div>
 		</div>
 	)
