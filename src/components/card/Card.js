@@ -115,20 +115,18 @@ const Card = ({ movie, deleteList, getList }) => {
 							</div>
 							<div className="card-actions">
 								<div className="card-action-button-container">
-									{isWatched && (
-										<button
-											className="card-action-button"
-											onClick={handleWatched}
-										>
-											<img
-												src={watchedIcon}
-												alt={
-													movie.watched ? "Watched Eye icon" : "NotWatched icon"
-												}
-												className="card-action-icon"
-											/>
-										</button>
-									)}
+									<button
+										className="card-action-button"
+										onClick={handleWatched}
+									>
+										<img
+											src={isWatched ? Watched : NotWatched}
+											alt={
+												movie.watched ? "Watched Eye icon" : "NotWatched icon"
+											}
+											className="card-action-icon"
+										/>
+									</button>
 									<button
 										onClick={() => handleDeleteList(movie.id)}
 										className="card-action-button"
