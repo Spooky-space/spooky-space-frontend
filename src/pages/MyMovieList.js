@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from "react"
-import Modals from "../components/modal/Modal"
-import EditList from "../components/modal/EditList"
-import Slider from "../components/slider"
-import { useNavigate } from "react-router-dom"
 import "./MyMovieList.css"
-import Card from "../components/card/Card"
-import { Spinner } from "reactstrap"
-import NavButton from "../components/NavButton"
 import MovieGrid from "../components/moviegrid/MovieGrid"
 
 const MyMovieList = ({ list, user, deleteList, updateList, getList }) => {
