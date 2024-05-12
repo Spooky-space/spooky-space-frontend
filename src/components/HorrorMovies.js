@@ -39,8 +39,8 @@ const HorrorMovies = () => {
 						))}
 					</Slider>
 				)}
+				<br name="most-popular-anchor" />
 			</div>
-			<br name="most-popular-anchor" />
 			<div>
 				<h1 name="highest-rated" className="home-slider-header">
 					Highest Rated
@@ -60,8 +60,8 @@ const HorrorMovies = () => {
 						))}
 					</Slider>
 				)}
+				<br name="highest-rated-anchor" />
 			</div>
-			<br name="highest-rated-anchor" />
 			<div>
 				<h1 name="a-to-z" className="home-slider-header">
 					A to Z
@@ -77,8 +77,8 @@ const HorrorMovies = () => {
 						))}
 					</Slider>
 				)}
+				<br name="a-to-z-anchor" />
 			</div>
-			<br name="a-to-z-anchor" />
 		</div>
 	)
 }
