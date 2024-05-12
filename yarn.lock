@@ -4885,16 +4885,6 @@ follow-redirects@^1.0.0, follow-redirects@^1.15.6:
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.6.tgz#7f815c0cda4249c74ff09e95ef97c23b5fd0399b"
   integrity sha512-wWN62YITEaOpSK584EZXJafH1AGpO8RVgElfkuXbTOrPX4fIfOyEpW/CsiNd8JdYrAoOvafRTOEnvsO++qCqFA==
 
-font-awesome@^4.7.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/font-awesome/-/font-awesome-4.7.0.tgz#8fa8cf0411a1a31afd07b06d2902bb9fc815a133"
-  integrity sha512-U6kGnykA/6bFmg1M/oT9EkFeIYv7JlX3bozwQJWiiLz6L0w3F5vBVPxHlwyX/vtNq1ckcpRKOB9f2Qal/VtFpg==
-
-fontawesome-free@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/fontawesome-free/-/fontawesome-free-1.0.4.tgz#c7c499708dabd59eb5dedf232b590a862e05957b"
-  integrity sha512-7sX6Lbg2oQiClFFFFitJlKg20h3YTBON6rdmq3uGjNwDo8G6EjF2bfj2OjjcCUmf4OvZCgyHaXfW2JseqissLw==
-
 for-each@^0.3.3:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/for-each/-/for-each-0.3.3.tgz#69b447e88a0a5d32c3e7084f3f1710034b21376e"
@@ -8223,7 +8213,6 @@ react-scroll@^1.9.0:
     lodash.throttle "^4.1.1"
     prop-types "^15.7.2"
 
-
 react-simple-star-rating@^5.1.7:
   version "5.1.7"
   resolved "https://registry.yarnpkg.com/react-simple-star-rating/-/react-simple-star-rating-5.1.7.tgz#5406ade8d0e117a654e979ebd702d89389876c29"
@@ -8236,7 +8225,6 @@ react-sound@^1.2.0:
   dependencies:
     prop-types "^15.5.7"
     soundmanager2 "^2.97.20170602"
-
 
 react-transition-group@^4.4.2:
   version "4.4.5"

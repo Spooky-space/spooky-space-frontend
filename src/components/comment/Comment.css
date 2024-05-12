@@ -65,7 +65,7 @@
 }
 
 .comment-nav-button:hover {
-	color: whitesmoke;
+	color: blue;
 }
 
 .comment-nav-button:active {
@@ -79,7 +79,7 @@
 	text-decoration: none;
 }
 .comments-wrapper {
-	position: relative;
+	position: relative !important;
 	left: 21%;
 	overflow: scroll;
 	height: 90%;

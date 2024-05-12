@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { NavLink } from "react-router-dom"
 import Freddy from "../../assets/spooky-user/freddy.webp"
 import Ghost from "../../assets/spooky-user/ghost.webp"
 import Ghost2 from "../../assets/spooky-user/ghost2.webp"
@@ -176,7 +175,7 @@ const CommentSection = ({ user, movie }) => {
 									onClick={handleAddComments}
 									labelPosition="left"
 								>
-									<NavLink className="comment-nav-link">Add a Comment</NavLink>
+									Add a Comment
 								</button>
 							</div>
 						</Form>
