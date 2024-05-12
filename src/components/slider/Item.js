@@ -29,6 +29,7 @@ const Item = ({ movie, slider }) => (
 					<ShowDetailsButton
 						slider={slider}
 						onClick={() => onSelectSlide(movie)}
+						className="show-details-button"
 					/>
 					{/* sets the slide to appear marked when clicked */}
 					{isActive && <Mark />}

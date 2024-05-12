@@ -7,7 +7,7 @@ const ShowDetailsButton = ({ onClick, slider }) => {
 	return (
 		<Link
 			onClick={onClick}
-			className="show-details-button"
+			// className="show-details-button"
 			to={slider}
 			smooth={true}
 			duration={500}
