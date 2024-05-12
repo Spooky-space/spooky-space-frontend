@@ -9,7 +9,7 @@ import "./Item.css"
 
 const imageUrlBase = "https://image.tmdb.org/t/p/original"
 
-const Item = ({ movie, slider }) => (
+const Item = ({ movie }) => (
 	<SliderContext.Consumer>
 		{({ onSelectSlide, currentSlide, elementRef }) => {
 			// checks to see if the current slide has the same id as the movie id
@@ -27,7 +27,7 @@ const Item = ({ movie, slider }) => (
 					<img src={imageUrlBase + movie.poster_path} alt={movie.title} />
 					{/* handles the styling of when the slide is clicked and updates state */}
 					<ShowDetailsButton
-						slider={slider}
+						slider={"scroll-anchor"}
 						onClick={() => onSelectSlide(movie)}
 					/>
 					{/* sets the slide to appear marked when clicked */}

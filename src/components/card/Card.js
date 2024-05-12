@@ -15,13 +15,15 @@ const Card = ({ movie, deleteList, getList }) => {
 	const [movieData, setMovieData] = useState(null)
 	const [isLoading, setIsLoading] = useState(true)
 	const [isWatched, setIsWatched] = useState(false)
-	const [watchedIcon, setWatchedIcon] = useState(isWatched)
+	const [movieWatched, setMovieWatched] = useState(false)
+	const [watchedIcon, setWatchedIcon] = useState(movieWatched)
 	const { tmdb_api_id } = movie
 	const id = tmdb_api_id
 
 	useEffect(() => {
 		fetchMovie()
 	}, [id])
+
 	const fetchMovie = async () => {
 		try {
 			const response = await axios.get(`${apiConfig.baseURL}movie/${id}`, {
@@ -73,10 +75,12 @@ const Card = ({ movie, deleteList, getList }) => {
 		if (!isWatched) {
 			setWatchedIcon(Watched)
 			setIsWatched(true)
+			setMovieWatched(true)
 			alert(`You've Watched ${movieData.title}`)
 		} else {
 			setWatchedIcon(NotWatched)
 			setIsWatched(false)
+			setMovieWatched(true)
 		}
 		updateList({ watched: isWatched }, movie.id)
 	}
@@ -116,7 +120,7 @@ const Card = ({ movie, deleteList, getList }) => {
 										onClick={handleWatched}
 									>
 										<img
-											src={watchedIcon}
+											src={movieWatched}
 											alt={
 												movie.watched ? "Watched Eye icon" : "NotWatched icon"
 											}
