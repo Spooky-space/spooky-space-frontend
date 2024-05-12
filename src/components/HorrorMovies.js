@@ -34,7 +34,7 @@ const HorrorMovies = () => {
 							<Slider.Item
 								movie={movie}
 								key={movie.id}
-								slider={"most-popular"}
+								slider={"most-popular-anchor"}
 							></Slider.Item>
 						))}
 					</Slider>
@@ -49,13 +49,13 @@ const HorrorMovies = () => {
 					<Slider
 						movie={rating()}
 						genreList={genreList}
-						slider={"highest-rated-anchor"}
+						slider={"highest-rated"}
 					>
 						{rating().map((movie) => (
 							<Slider.Item
 								movie={movie}
 								key={movie.id}
-								slider={"highest-rated"}
+								slider={"highest-rated-anchor"}
 							></Slider.Item>
 						))}
 					</Slider>
@@ -72,12 +72,13 @@ const HorrorMovies = () => {
 							<Slider.Item
 								movie={movie}
 								key={movie.id}
-								slider={"a-to-z"}
+								slider={"a-to-z-anchor"}
 							></Slider.Item>
 						))}
 					</Slider>
 				)}
 			</div>
+			<br name="most-popular-anchor" />
 		</div>
 	)
 }
