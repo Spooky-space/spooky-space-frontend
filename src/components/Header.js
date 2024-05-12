@@ -1,7 +1,7 @@
 import React from "react"
 import headerlogo from "../assets/header-logo.png"
 import NavButton from "./NavButton"
-import { Link, NavLink, useHref, useNavigate } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 import AboutUsModal from "./modal/AboutUsModal"
 import { Button } from "reactstrap"
 
@@ -21,14 +21,12 @@ const Header = ({ logOut, user }) => {
 					</NavLink>
 					<div className="button-container">
 						<AboutUsModal />
-						<Button
+						<NavButton
 							buttonContent="My Movies"
 							className="header-nav-button nav-button"
 						>
-							<NavLink to="/mymovielist" className="my-movie-link">
-								MyMovieList
-							</NavLink>
-						</Button>
+							MyMovieList
+						</NavButton>
 						<Button
 							onClick={handleLogOut}
 							className="header-logout-nav-button nav-button"
