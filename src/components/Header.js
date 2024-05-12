@@ -20,9 +20,9 @@ const Header = ({ logOut, user }) => {
 					</NavLink>
 					<div className="button-container">
 						<AboutUsModal />
-						<Button to="/mymovielist" className="header-nav-button nav-button">
+						<NavLink to="/mymovielist" className="header-nav-button nav-button">
 							My Movies
-						</Button>
+						</NavLink>
 
 						<Button
 							onClick={handleLogOut}
