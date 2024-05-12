@@ -22,7 +22,10 @@ const Card = ({ movie, deleteList, getList }) => {
 
 	useEffect(() => {
 		fetchMovie()
-	}, [id])
+	})
+	useEffect(() => {
+		updateList()
+	})
 
 	const fetchMovie = async () => {
 		try {
