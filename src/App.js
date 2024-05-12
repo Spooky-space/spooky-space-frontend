@@ -3,12 +3,10 @@ import { Routes, Route } from "react-router-dom"
 import Landing from "./pages/Landing"
 import Home from "./pages/Home.js"
 import Show from "./pages/Show"
-import MyComments from "./pages/MyComments.js"
 import NotFound from "./pages/NotFound"
 import Footer from "./components/Footer.js"
 import Header from "./components/Header.js"
 import MyMovieList from "./pages/MyMovieList.js"
-import EditMovie from "./components/modal/EditList.js"
 import { useNavigate } from "react-router-dom"
 
 import "./App.css"
@@ -16,7 +14,6 @@ import "./App.css"
 const App = () => {
 	const [user, setUser] = useState(null)
 	const [list, setList] = useState([])
-	const [comment, setComment] = useState(null)
 	const navigate = useNavigate()
 
 	useEffect(() => {
