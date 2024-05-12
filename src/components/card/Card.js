@@ -22,7 +22,6 @@ const Card = ({ movie, deleteList, getList }) => {
 	useEffect(() => {
 		fetchMovie()
 	}, [id])
-	useEffect(() => handleWatched())
 	const fetchMovie = async () => {
 		try {
 			const response = await axios.get(`${apiConfig.baseURL}movie/${id}`, {
