@@ -22,8 +22,6 @@ const Card = ({ movie, deleteList, getList }) => {
 
 	useEffect(() => {
 		fetchMovie()
-	})
-	useEffect(() => {
 		updateList()
 	})
 
