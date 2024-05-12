@@ -83,8 +83,9 @@
 	position: relative !important;
 	left: 21%;
 	overflow: scroll;
-	height: 90%;
+	height: 80%;
 	width: 75%;
+	padding-top: 15px;
 }
 .comment-wrapper {
 	padding-bottom: 10px;
