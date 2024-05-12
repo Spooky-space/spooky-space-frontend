@@ -64,7 +64,6 @@ const AboutUsModal = ({ trigger, title }) => {
 					className="modal-nav-button nav-button header-nav-button"
 					onClick={toggle}
 				>
-					{" "}
 					About Us
 				</Button>
 			</div>

@@ -85,7 +85,7 @@
 	margin-right: 5%;
 }
 .header-nav-button {
-	width: 33%;
+	width: 100% !important;
 	text-align: center;
 }
 .header-logout-nav-button {
