@@ -20,7 +20,7 @@ const Header = ({ logOut, user }) => {
 					</NavLink>
 					<div className="button-container">
 						<AboutUsModal />
-						<NavLink to="/mymovielist" className="header-nav-button nav-button">
+						<NavLink to="/mymovielist" className="nav-button">
 							My Movies
 						</NavLink>
 
