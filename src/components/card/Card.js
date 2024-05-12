@@ -74,6 +74,9 @@ const Card = ({ movie, deleteList, getList }) => {
 			setIsWatched(true)
 			alert(`You've Watched ${movieData.title}`)
 		} else {
+			alert(
+				`are you sure you want to change ${movieData.title} to not watched?`
+			)
 			setIsWatched(false)
 		}
 		updateList({ watched: isWatched }, movie.id)
