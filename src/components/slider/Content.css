@@ -1,7 +1,6 @@
 .content {
 	position: relative;
 	height: 37vw;
-	margin-top: -3%;
 	z-index: 0 !important;
 }
 .content-background,
