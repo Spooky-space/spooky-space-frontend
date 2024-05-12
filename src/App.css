@@ -45,7 +45,6 @@
 	color: whitesmoke;
 	-webkit-text-stroke: 1px black;
 	font-size: 25px;
-	width: 40%;
 	height: 45px;
 	text-align: center !important;
 	overflow: hidden;
@@ -85,7 +84,6 @@
 	margin-right: 5%;
 }
 .header-nav-button {
-	width: 75px !important;
 	text-align: center;
 }
 .header-logout-nav-button {
