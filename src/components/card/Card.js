@@ -117,15 +117,13 @@ const Card = ({ movie, deleteList, getList }) => {
 										className="card-action-button"
 										onClick={handleWatched}
 									>
-										{isWatched && (
-											<img
-												src={watchedIcon}
-												alt={
-													movie.watched ? "Watched Eye icon" : "NotWatched icon"
-												}
-												className="card-action-icon"
-											/>
-										)}
+										<img
+											src={watchedIcon}
+											alt={
+												movie.watched ? "Watched Eye icon" : "NotWatched icon"
+											}
+											className="card-action-icon"
+										/>
 									</button>
 									<button
 										onClick={() => handleDeleteList(movie.id)}
