@@ -32,13 +32,13 @@ const Card = ({ movie, deleteList, getList }) => {
 		} finally {
 			setIsLoading(false)
 		}
-		if (isLoading) {
-			return <div>Loading...</div>
-		}
+	}
+	if (isLoading) {
+		return <div>Loading...</div>
+	}
 
-		if (!movie) {
-			return <div>No movie found.</div>
-		}
+	if (!movie) {
+		return <div>No movie found.</div>
 	}
 	const handleWatched = () => {
 		if (!isWatched) {
