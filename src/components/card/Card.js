@@ -2,14 +2,12 @@ import { useEffect, useState } from "react"
 import "./Card.css"
 import axios from "axios"
 import { apiConfig } from "../../apiConfig"
-import { useNavigate } from "react-router-dom"
 import Trashcan from "../../assets/delete.png"
 import NotWatched from "../../assets/notwatched.png"
 import StarRating from "../star-rating/StarRating"
 import Watched from "../../assets/watched.png"
 
 const Card = ({ movie, deleteList, getList }) => {
-	const navigate = useNavigate()
 	const imageUrlBase = "https://image.tmdb.org/t/p/original"
 
 	const [movieData, setMovieData] = useState(null)
@@ -30,28 +28,34 @@ const Card = ({ movie, deleteList, getList }) => {
 				headers: apiConfig.headers,
 			})
 			setMovieData(response.data)
+			setIsWatched(response.data.watched)
 		} catch (error) {
 		} finally {
 			setIsLoading(false)
-			if (movie.watched) {
-				setWatchedIcon(Watched)
-			} else if (!movie.watched) {
-				setWatchedIcon(NotWatched)
-			}
+		}
+		if (isLoading) {
+			return <div>Loading...</div>
+		}
+
+		if (!movie) {
+			return <div>No movie found.</div>
 		}
 	}
-	if (isLoading) {
-		return <div>Loading...</div>
+	const handleWatched = () => {
+		if (!isWatched) {
+			setIsWatched(true)
+			setWatchedIcon(Watched)
+			alert(`You've Watched ${movieData.title}`)
+		} else {
+			alert(
+				`are you sure you want to change ${movieData.title} to not watched?`
+			)
+			setIsWatched(false)
+			setWatchedIcon(NotWatched)
+		}
+		updateList({ watched: isWatched }, movie.id)
 	}
 
-	if (!movie) {
-		return <div>No movie found.</div>
-	}
-
-	const handleDeleteList = (id) => {
-		alert("Are you sure you want to delete this movie?")
-		deleteList(id)
-	}
 	const updateList = async (watched, id) => {
 		console.log("Watched:", watched)
 		console.log("Id:", id)
@@ -75,20 +79,9 @@ const Card = ({ movie, deleteList, getList }) => {
 			alert("Opps something went wrong", error.message)
 		}
 	}
-	const handleWatched = () => {
-		if (!isWatched) {
-			setIsWatched(true)
-			setWatchedIcon(Watched)
-			alert(`You've Watched ${movieData.title}`)
-		} else {
-			alert(
-				`are you sure you want to change ${movieData.title} to not watched?`
-			)
-			setIsWatched(false)
-			setWatchedIcon(NotWatched)
-		}
-		updateList({ watched: isWatched }, movie.id)
-		watchedIcon()
+	const handleDeleteList = (id) => {
+		alert("Are you sure you want to delete this movie?")
+		deleteList(id)
 	}
 	return (
 		<div className="my-lists-collection">
@@ -125,7 +118,7 @@ const Card = ({ movie, deleteList, getList }) => {
 										className="card-action-button"
 										onClick={handleWatched}
 									>
-										{movieData && (
+										{isWatched && (
 											<img
 												src={movie.watched}
 												alt={
