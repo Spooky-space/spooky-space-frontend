@@ -13,7 +13,6 @@ const Card = ({ movie, deleteList, getList }) => {
 	const [movieData, setMovieData] = useState(null)
 	const [isLoading, setIsLoading] = useState(true)
 	const [isWatched, setIsWatched] = useState(movie.watched)
-	const [watchedIcon, setWatchedIcon] = useState()
 	const { tmdb_api_id } = movie
 	const id = tmdb_api_id
 
@@ -40,12 +39,7 @@ const Card = ({ movie, deleteList, getList }) => {
 	if (!movie) {
 		return <div>No movie found.</div>
 	}
-	if (!isWatched) {
-		setWatchedIcon(NotWatched)
-	}
-	if (isWatched) {
-		setWatchedIcon(Watched)
-	}
+
 	const handleWatched = () => {
 		if (!isWatched) {
 			setIsWatched(true)
@@ -122,7 +116,7 @@ const Card = ({ movie, deleteList, getList }) => {
 										onClick={handleWatched}
 									>
 										<img
-											src={watchedIcon}
+											src={isWatched ? Watched : NotWatched}
 											alt={
 												movie.watched ? "Watched Eye icon" : "NotWatched icon"
 											}
