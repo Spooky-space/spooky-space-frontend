@@ -35,7 +35,7 @@ const Card = ({ movie, deleteList, getList }) => {
 			setIsLoading(false)
 			if (movie.watched) {
 				setWatchedIcon(Watched)
-			} else {
+			} else if (!movie.watched) {
 				setWatchedIcon(NotWatched)
 			}
 		}
@@ -88,6 +88,7 @@ const Card = ({ movie, deleteList, getList }) => {
 			setWatchedIcon(NotWatched)
 		}
 		updateList({ watched: isWatched }, movie.id)
+		watchedIcon()
 	}
 	return (
 		<div className="my-lists-collection">
@@ -124,13 +125,15 @@ const Card = ({ movie, deleteList, getList }) => {
 										className="card-action-button"
 										onClick={handleWatched}
 									>
-										<img
-											src={watchedIcon}
-											alt={
-												movie.watched ? "Watched Eye icon" : "NotWatched icon"
-											}
-											className="card-action-icon"
-										/>
+										{movieData && (
+											<img
+												src={movie.watched}
+												alt={
+													movie.watched ? "Watched Eye icon" : "NotWatched icon"
+												}
+												className="card-action-icon"
+											/>
+										)}
 									</button>
 									<button
 										onClick={() => handleDeleteList(movie.id)}
