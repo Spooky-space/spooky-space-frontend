@@ -44,11 +44,13 @@ const Card = ({ movie, deleteList, getList }) => {
 		if (!isWatched) {
 			setIsWatched(true)
 			alert(`You've Watched ${movieData.title}`)
-		} else {
-			alert(
-				`are you sure you want to change ${movieData.title} to not watched?`
-			)
+		}
+		updateList({ watched: isWatched }, movie.id)
+	}
+	const handleWatchedReset = () => {
+		if (isWatched) {
 			setIsWatched(false)
+			alert(`You set ${movieData.title} to not watched`)
 		}
 		updateList({ watched: isWatched }, movie.id)
 	}
@@ -113,7 +115,9 @@ const Card = ({ movie, deleteList, getList }) => {
 								<div className="card-action-button-container">
 									<button
 										className="card-action-button"
-										onClick={handleWatched}
+										onClick={() =>
+											!movie.watched ? handleWatched : handleWatchedReset
+										}
 									>
 										<img
 											src={isWatched ? Watched : NotWatched}
