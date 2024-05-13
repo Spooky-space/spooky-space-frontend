@@ -115,12 +115,12 @@ const Card = ({ movie, deleteList, getList }) => {
 								<div className="card-action-button-container">
 									<button
 										className="card-action-button"
-										onClick={() =>
+										onClick={
 											!movie.watched ? handleWatched() : handleWatchedReset()
 										}
 									>
 										<img
-											src={isWatched ? Watched : NotWatched}
+											src={movie.watched ? Watched : NotWatched}
 											alt={
 												movie.watched ? "Watched Eye icon" : "NotWatched icon"
 											}
