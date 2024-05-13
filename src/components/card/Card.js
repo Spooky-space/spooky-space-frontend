@@ -28,7 +28,6 @@ const Card = ({ movie, deleteList, getList }) => {
 				headers: apiConfig.headers,
 			})
 			setMovieData(response.data)
-			setIsWatched(response.data.watched)
 		} catch (error) {
 		} finally {
 			setIsLoading(false)
@@ -120,7 +119,7 @@ const Card = ({ movie, deleteList, getList }) => {
 									>
 										{isWatched && (
 											<img
-												src={movie.watched}
+												src={watchedIcon}
 												alt={
 													movie.watched ? "Watched Eye icon" : "NotWatched icon"
 												}
