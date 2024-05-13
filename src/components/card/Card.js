@@ -116,7 +116,7 @@ const Card = ({ movie, deleteList, getList }) => {
 									<button
 										className="card-action-button"
 										onClick={() =>
-											!movie.watched ? handleWatched : handleWatchedReset
+											!movie.watched ? handleWatched() : handleWatchedReset()
 										}
 									>
 										<img
